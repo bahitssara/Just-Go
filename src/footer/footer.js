@@ -5,7 +5,7 @@ import './footer.css'
 export default function footer() {
     return(
         <footer>
-            Author: Sara Mayberry
+            Built by: Sara Mayberry
         </footer>
     )
 }

@@ -18,7 +18,7 @@ header {
   .sign-in-form {
     display: flex;
     justify-content: center;
-    padding: 5px;
+    padding: 15px;
     margin: 0;
   }
   
@@ -32,8 +32,8 @@ header {
   
   header button {
     float: right;
-    padding:10px;
     height: 30px;
+    margin:4.2px;
   }
   
   .fa-calendar-alt {

@@ -1,20 +1,13 @@
 .search-bar {
     display: flex;
-    justify-content: center;
-    width: 50%;
     margin-top: 100px;
+    justify-content: center;
 }
 
-.search-form input {
+.search-form input, select {
   margin: auto;
   display: block;
 }
-
-.search-form select {
-    display: block;
-    margin: auto;
-}
-
 
 @media only screen and (min-width: 320px) {
 
@@ -28,5 +21,6 @@
 @media only screen and (min-width: 1000px) {
   .search-bar {
     justify-content: space-around;
+    width: 50%;
   }
 }

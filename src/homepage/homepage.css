@@ -4,9 +4,16 @@
 
 .home-page h2 {
   margin: auto;
+  padding: 20px;
 }
 
 .home-page p {
-    padding: 10px;
-    margin: auto;
-  }
+  padding: 10px;
+  margin: auto;
+}
+
+.home-page i {
+  font-size: 120px;
+  padding: 10px;
+}
+
