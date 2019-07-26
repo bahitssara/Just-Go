@@ -1,4 +1,5 @@
 import React from 'react'
+import './SignUpForm.css'
 
 
 class SignUpForm extends React.Component{

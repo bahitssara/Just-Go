@@ -1,0 +1,33 @@
+.signup-page {
+    margin: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up-main {
+    width: 75%;
+    margin: auto;
+}
+
+.sign-up-fieldset label {
+    display: block;    
+
+}
+
+.signup-page button {
+    display: block;
+}
+
+  
+  /* @media screen and (min-width: 320px) {
+
+  }
+  
+  @media screen and (min-width: 765px) {
+
+  }
+  
+  @media screen and (min-width: 1000px) { 
+
+  } */

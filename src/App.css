@@ -15,17 +15,3 @@ footer {
   padding: 1% 0;
   background-color: #aaa;
 }
-
-.home-page p {
-  padding: 10px;
-}
-
-.signup-page label{
-  display: block;
-  margin: auto;
-}
-
-.signup-page button {
-  display: block;
-  margin: auto;
-}
