@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-export default function homePage() {
+export default function HomePage() {
     return(
         <section className='home-page'>
             <h2>Welcome</h2>
