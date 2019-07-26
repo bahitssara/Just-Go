@@ -1,0 +1,54 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: grey;
+  }
+  
+  header h1 {
+    display: flex;
+    justify-content: center;
+    padding:10px;
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  .sign-in-form {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 0;
+  }
+  
+  .header input,label {
+    padding: 5px;
+  }
+  
+  .header input {
+    height: 30px;
+  }
+  
+  header button {
+    float: right;
+    padding:10px;
+    height: 30px;
+  }
+  
+  .fa-calendar-alt {
+    float: left;
+    padding: 10px;
+  }
+
+@media only screen and (min-width: 1000px) {
+    .home-link {
+        display: inline-block;
+        float: left;
+      }
+   
+     .sign-in-form {
+       display: inline-block;
+       float: right;
+     }
+   }

@@ -1,0 +1,53 @@
+.calendar-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.calendar-page h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.weekday {
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 10px;
+    height: 200px;
+    min-width:200px;
+    width: 25%;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.event {
+  border: 1px solid grey;
+  padding: 10px;
+  border-radius: 3px;
+  text-decoration:underline;
+}
+
+.delete-button {
+  display: block;
+  margin: auto;
+}
+
+.edit-button {
+  display: block;
+  margin: auto;
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .calendar-page {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .calendar-table {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}
