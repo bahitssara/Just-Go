@@ -24,8 +24,10 @@
 
 
   
-  /* @media screen and (min-width: 320px) {
-
+  @media screen and (min-width: 320px) {
+    .signup-page {
+        margin: 100px;
+    }
   }
   
   @media screen and (min-width: 765px) {
@@ -34,4 +36,4 @@
   
   @media screen and (min-width: 1000px) { 
 
-  } */
+  }
