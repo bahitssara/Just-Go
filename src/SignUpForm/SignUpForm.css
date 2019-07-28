@@ -5,20 +5,23 @@
     align-items: center;
 }
 
-.sign-up-main {
-    width: 75%;
-    margin: auto;
+.signup-page h3{
+    flex-direction: row;
+}
+
+.sign-up-fieldset {
+    width: 300px;
 }
 
 .sign-up-fieldset label {
     display: block;    
-
 }
 
 .signup-page button {
     display: block;
     margin: auto;
 }
+
 
   
   /* @media screen and (min-width: 320px) {

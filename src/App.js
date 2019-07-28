@@ -6,6 +6,7 @@ import Header from './Header/Header'
 import Footer from './footer/footer'
 import HomePage from './HomePage/HomePage';
 import EventPage from './EventPage/EventPage';
+import LoginForm from './LoginForm/LoginForm';
 
 class App extends React.Component {
   render(){
@@ -15,6 +16,7 @@ class App extends React.Component {
         <Route path='/' component={HomePage} exact/>
         <Route path='/signup' component={SignUpForm} exact/>
         <Route path='/events' component={EventPage} exact/>
+        <Route path='/login' component={LoginForm} exact/>
         <Route path='/' component={Footer} />
       </main>
     );

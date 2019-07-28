@@ -11,6 +11,10 @@ class Header extends React.Component{
                 <h1>This Week
                 <i className='fas fa-calendar-alt'></i></h1>
               </Link>
+              <Link to='/login'className='sign-in-link'>
+                Login
+                <i className='fas fa-sign-in-alt'/>
+              </Link>
                 <form className='sign-in-form'>
                   <label htmlFor='email'>Email</label>
                     <input 

@@ -1,0 +1,18 @@
+.sign-in-page {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+} 
+
+.sign-in-page fieldset {
+    width: 80%;
+}
+
+.sign-in-page label {
+    display: block;
+}
+
+.sign-in-page button {
+    display: block;
+    margin: auto;
+}
