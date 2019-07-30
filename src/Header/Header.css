@@ -45,9 +45,6 @@ header button {
   .sign-in-form {
     display: none;
   }
-
-  .sign-in-link {
-  }
 }
 
 @media only screen and (min-width: 720px) {
@@ -76,5 +73,11 @@ header button {
 
    .sign-in-link {
     display: none;
+  }
+
+  .logout-link {
+    display: inline-block;
+    float: right;
+    padding: 15px;
   }
 }
