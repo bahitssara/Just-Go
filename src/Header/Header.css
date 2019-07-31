@@ -4,7 +4,10 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: grey;
+  background-color: rgba(18,17,19,0.85);
+  -webkit-box-shadow: 0 3px 5px rgba(18,17,19, 0.6);
+  -moz-box-shadow: 0 3px 5px rgba(18,17,19, 0.6);
+  box-shadow: 0 4px 5px rgba(18,17,19, 0.6);
 }
 
 header h1 {
@@ -13,11 +16,24 @@ header h1 {
   padding:10px;
   font-size: 25px;
   margin: 0;
+  color: white;
+}
+
+header a {
+  text-decoration: none;
 }
 
 .fa-calendar-alt {
   float: left;
   padding: 10px;
+}
+
+.logout-link {
+  color: white;
+}
+
+.sign-in-link {
+  color: white;
 }
 
 @media only screen and (min-width: 720px) {

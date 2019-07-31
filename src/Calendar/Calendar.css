@@ -15,7 +15,8 @@
 }
 
 .weekday {
-    border: 1px solid black;
+    box-shadow: 2px 4px 3px #1E1A1D;
+    background-color: rgba(18,17,19,0.85);
     border-radius: 4px;
     margin: 10px;
     height: 300px;
@@ -25,7 +26,7 @@
 }
 
 .event {
-  border: 1px solid grey;
+  background-color: rgba(18,17,19,0.85);
   padding: 10px;
   border-radius: 3px;
   text-decoration:underline;

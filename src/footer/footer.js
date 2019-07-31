@@ -5,7 +5,7 @@ import './footer.css'
 export default function footer() {
     return(
         <footer>
-            Built by: Sara Mayberry
+            Search Powered by: SeatGeekAPI
         </footer>
     )
 }

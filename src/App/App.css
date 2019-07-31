@@ -9,10 +9,22 @@ body {
   color: #444;
   line-height: 1.5;
   text-align: center;
+  color: white;
+  background: url(./thisweek2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 nav,
 footer {
   padding: 1% 0;
-  background-color: #aaa;
 }
+
+
+/* skin/tan EFC69B
+ reddish pink AF1B3F
+ dark purple 473144
+ tan CCB69B
+peach DF9B6D */
