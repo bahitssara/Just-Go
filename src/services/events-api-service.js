@@ -9,7 +9,7 @@ const EventsApiService = {
         'content-type': 'application/json',
         'Authorization': `bearer ${TokenService.getAuthToken()}`,
       },
-      body: JSON.stringify(review)
+      body: JSON.stringify(event)
     })
       .then(res =>
         (!res.ok)
@@ -20,4 +20,4 @@ const EventsApiService = {
   }
 }
 
-export default BeveragesApiService;
+export default EventsApiService;

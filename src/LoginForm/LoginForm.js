@@ -102,7 +102,7 @@ class LoginForm extends React.Component{
                 password.value = ''
                 TokenService.saveAuthToken(res.authToken)
                 TokenService.saveUserId(res.userid)
-                window.location = '/';
+                window.location = '/events';
             })
             .catch(res => {
                 this.setState({ error: res.error })
@@ -141,8 +141,8 @@ class LoginForm extends React.Component{
                     <button type='submit'>Sign In</button>
                     <section className='demo-login-info'>
                             <h2>Demo login info:</h2>
-                            <p>Email: testuser101@email.com</p>
-                            <p>Password: Testuser101!</p>
+                            <p>Email: testuser@email.com</p>
+                            <p>Password: TestUser101!</p>
                     </section>
                     </fieldset>
                 </form>
