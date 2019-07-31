@@ -97,8 +97,7 @@ class SearchEvents extends React.Component{
         return(
             <section className='search-bar'>
                 <form className='search-form' onSubmit={e => this.updateState(e)}>
-                        <legend>Search or Add Events</legend>
-                        <label htmlFor='search-input'>Search
+                        <label htmlFor='search-input'>Search events
                         <input type='text' name='search_input' id='search_input' ref={input => (this.input = input)} />
                         </label>
                         <button type='submit' className='search-button' >Search</button>
@@ -114,7 +113,6 @@ class SearchEvents extends React.Component{
                                             alt='event' className='event-photo'
                                             key={photo.id}/>
                                         )}
-                                        <p>Event Type:{event.type}</p>
                                         <p>Event Type:{event.type}</p>
                                         <p>{event.venue.name}</p>
                                         <span className='event-date'>Event Date: {format(event.datetime_local, 'ddd MM/DD/YYYY')}</span>

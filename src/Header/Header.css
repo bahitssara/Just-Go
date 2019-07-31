@@ -15,46 +15,12 @@ header h1 {
   margin: 0;
 }
 
-.sign-in-form {
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-  margin: 0;
-}
-
-.header input,label {
-  padding: 5px;
-}
-
-.header input {
-  height: 30px;
-}
-
-header button {
-  float: right;
-  height: 30px;
-  margin:4.2px;
-}
-
 .fa-calendar-alt {
   float: left;
   padding: 10px;
 }
 
-@media only screen and (min-width: 320px) {
-  .sign-in-form {
-    display: none;
-  }
-}
-
 @media only screen and (min-width: 720px) {
-  .sign-in-form {
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    margin: 0;
-  }
-
   .sign-in-link {
     display: none;
   }
@@ -65,11 +31,6 @@ header button {
       display: inline-block;
       float: left;
     }
- 
-   .sign-in-form {
-     display: inline-block;
-     float: right;
-   }
 
    .sign-in-link {
     display: none;
