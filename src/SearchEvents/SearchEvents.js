@@ -5,6 +5,7 @@ import ThisWeekContext from '../ThisWeekContext'
 import { format } from 'date-fns'
 import EventsApiService from '../services/events-api-service'
 import AddEvent from '../AddEvent/AddEvent'
+import TokenService from '../services/token-service'
 
 class SearchEvents extends React.Component{
     constructor(props) {
@@ -65,15 +66,16 @@ class SearchEvents extends React.Component{
     handleEventSubmit = ev => {
         ev.preventDefault();
         this.setState({ error: null })
-        const { user_id, weekday, title, event_url, event, event_date } = ev.target
+        const { weekday, title, event_url, event, event_date, event_img } = ev.target
 
         EventsApiService.postEvent({
-            user_id: user_id.value,
+            user_id: TokenService.getUserId(),
             weekday: weekday.value,
             title: title.value,
             event_url: event_url.value,
             event: event.value,
-            event_date: event_date.value
+            event_date: event_date.value,
+            event_img: event_img.value
         })
             .then(() =>
                 weekday.value = '',
@@ -81,6 +83,7 @@ class SearchEvents extends React.Component{
                 event_url.value = '',
                 event.value = '',
                 event_date.value = '',
+                event_img.value = ''
             )
             .catch(res => {
                 this.setState({ error: res.error })
@@ -90,6 +93,7 @@ class SearchEvents extends React.Component{
     static contextType = ThisWeekContext;
     render() { 
         const results = this.state.searchResults
+    
         return(
             <section className='search-bar'>
                 <form className='search-form' onSubmit={e => this.updateState(e)}>
@@ -106,18 +110,22 @@ class SearchEvents extends React.Component{
                                     <li className='search-li-item' key={event.id}>
                                         <a href={event.url} className='event-link' rel='noopener noreferrer' target='_blank'>{event.title}</a>
                                         {event.performers.map(photo => 
-                                        <img src={photo.image} 
+                                            <img src={photo.image} 
                                             alt='event' className='event-photo'
                                             key={photo.id}/>
                                         )}
                                         <p>Event Type:{event.type}</p>
+                                        <p>Event Type:{event.type}</p>
                                         <p>{event.venue.name}</p>
                                         <span className='event-date'>Event Date: {format(event.datetime_local, 'ddd MM/DD/YYYY')}</span>
-
                                         <AddEvent 
                                            title={event.title} 
                                            weekday={event.datetime_local}
-                                           
+                                           event={event.type}
+                                           event_url={event.url}
+                                           event_date={event.datetime_local}
+                                        //    event_img={}
+                                           onAddEvent = {(e) => this.handleEventSubmit(e)}
                                         />
                                     </li>
                                 )}
@@ -129,3 +137,4 @@ class SearchEvents extends React.Component{
 }
 
 export default SearchEvents;
+
