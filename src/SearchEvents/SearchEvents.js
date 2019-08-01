@@ -13,6 +13,7 @@ class SearchEvents extends React.Component{
         this.state = {
             query: '',
             searchResults: [],
+            img_url: '',
             weekday: '',
             title: '',
             event_url: '',
@@ -53,10 +54,15 @@ class SearchEvents extends React.Component{
                 throw new Error(response.statusText);
             })
             .then(responseJson => {
+                const data = responseJson.events.map(img => {
+                    return img.performers
+                })
                 this.setState({
-                    searchResults: responseJson.events
+                    searchResults: responseJson.events,
+                    img_url: data
                 })
                 console.log(this.state.searchResults)
+                console.log(this.state.img_url)
             })
             .catch(error => {
                 console.error({ error })
@@ -92,8 +98,7 @@ class SearchEvents extends React.Component{
     
     static contextType = ThisWeekContext;
     render() { 
-        const results = this.state.searchResults
-    
+        const results = this.state.searchResults        
         return(
             <section className='search-bar'>
                 <form className='search-form' onSubmit={e => this.updateState(e)}>
@@ -105,14 +110,10 @@ class SearchEvents extends React.Component{
                 <h3>Results</h3>
                         <div className='results'>
                             <ul className='results-li'>
-                                {results.map(event =>             
-                                    <li className='search-li-item' key={event.id}>
+                                {results.map(event => 
+                                        <li className='search-li-item' key={event.id}>
                                         <a href={event.url} className='event-link' rel='noopener noreferrer' target='_blank'>{event.title}</a>
-                                        {event.performers.map(photo => 
-                                            <img src={photo.image} 
-                                            alt='event' className='event-photo'
-                                            key={photo.id}/>
-                                        )}
+                                        <img src={event.performers[0].image} alt='event'/>
                                         <p>Event Type:{event.type}</p>
                                         <p>{event.venue.name}</p>
                                         <span className='event-date'>Event Date: {format(event.datetime_local, 'ddd MM/DD/YYYY')}</span>
@@ -122,10 +123,10 @@ class SearchEvents extends React.Component{
                                            event={event.type}
                                            event_url={event.url}
                                            event_date={event.datetime_local}
-                                        //    event_img={}
+                                           event_img={event.performers[0].image}
                                            onAddEvent = {(e) => this.handleEventSubmit(e)}
                                         />
-                                    </li>
+                                    </li>       
                                 )}
                              </ul> 
                         </div>
