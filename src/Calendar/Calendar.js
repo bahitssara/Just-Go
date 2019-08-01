@@ -75,14 +75,14 @@ class Calendar extends React.Component{
         console.log(events)
         return(
             <section className='calendar-page'>
-                <h2>Your Current Events</h2>
+                <h2>Your Saved Events</h2>
                     <div className='calendar-table'>
                         {events.map(data =>
                         <div className='weekday' key={data.id}>{data.weekday}
-                            <div className='event'><h3>Event</h3>
+                            <div className='event'><h3>Events:</h3>
                                 <a href={data.event_url} className='event-link' rel='noopener noreferrer' target='_blank'>{data.title}</a>
                                 <span className='event-date'> {format(data.event_date, 'ddd MM/DD/YYYY')}</span>
-                                <p>{data.event}</p>
+                                <p>Event type: {data.event}</p>
                             {this.renderDeleteButton()}
                             <button className='edit-button'>Edit</button>
                             </div>

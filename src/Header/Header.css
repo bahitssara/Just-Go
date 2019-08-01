@@ -23,6 +23,10 @@ header a {
   text-decoration: none;
 }
 
+.home-link:hover {
+  color: #583e88;
+}
+
 .fa-calendar-alt {
   float: left;
   padding: 10px;
@@ -34,6 +38,10 @@ header a {
 
 .sign-in-link {
   color: white;
+}
+
+.sign-in-link:hover {
+  color: #583e88;
 }
 
 @media only screen and (min-width: 720px) {

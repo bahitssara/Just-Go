@@ -7,33 +7,51 @@
 
 .signup-page h3{
     flex-direction: row;
+    text-shadow: 2px 3px 4px rgba(18,17,19)
 }
 
 .sign-up-fieldset {
     width: 300px;
+    background-color: rgba(18,17,19,0.95);
+    border: 1px black solid;
+    border-radius: 20px;
 }
 
 .sign-up-fieldset label {
     display: block;    
 }
 
-.signup-page button {
-    display: block;
-    margin: auto;
+.signup-page input {
+    width: 70%;
+    height: 30px;
+    border-radius: 4px;
 }
 
+.sign-up-submit {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    height: 30px;
+    width: 40%;
+    border-radius: 4px;
+}
 
-  
-  @media screen and (min-width: 320px) {
+.sign-up-fieldset ul {
+    list-style-type: none;
+    padding-left: 0;
+    font-size: 15px;
+}
+
+@media screen and (min-width: 320px) {
     .signup-page {
         margin: 100px;
     }
-  }
-  
-  @media screen and (min-width: 765px) {
+}
 
-  }
-  
-  @media screen and (min-width: 1000px) { 
+@media screen and (min-width: 765px) {
 
-  }
+}
+
+@media screen and (min-width: 1000px) { 
+
+}

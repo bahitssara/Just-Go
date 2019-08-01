@@ -8,6 +8,8 @@
 .calendar-page h2 {
   display: flex;
   justify-content: center;
+  text-shadow: 2px 3px 4px rgba(18,17,19)
+
 }
 
 .calendar-page ul {
@@ -34,6 +36,7 @@
 
 .event-link {
   display: block;
+  color: white;
 }
 
 .delete-button {

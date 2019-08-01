@@ -32,7 +32,7 @@ class Header extends React.Component{
     return (
       <div>
         <Link to='/'className='home-link'>
-          <h1>This Week
+          <h1 className='home-link'>This Week
             <i className='fas fa-calendar-alt'></i></h1>
         </Link>
         <Link to='/login' className='sign-in-link'>

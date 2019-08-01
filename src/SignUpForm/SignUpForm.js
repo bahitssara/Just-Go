@@ -209,7 +209,7 @@ class SignUpForm extends React.Component{
                         <div className="error" role="alert">
                             {error && <span className="signup-error">{error}</span>}
                         </div>
-                        <button className='sign-up-button'>Create Account</button>
+                        <button className='sign-up-submit'>Create Account</button>
                         <ul>
                             <li>*All fields are required</li>
                             <li>*Password must have 1 uppercase, one symbol, and at least 8 characters</li>
