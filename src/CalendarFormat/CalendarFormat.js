@@ -49,11 +49,11 @@ class CalendarFormat extends React.Component {
                 <ul className='weekday'>{weekday}
                     <li key={id} className='event'><h3>Events:</h3>
                         <a href={event_url} className='event-link' rel='noopener noreferrer' target='_blank'>{title}</a>
-                        <img src={event_img} alt='event' />
+                        <img src={event_img} alt='event' className='event-pic' />
                         <span className='event-date'> {format(event_date, 'ddd MM/DD/YYYY')}</span>
                         <p>Event type: {event}</p>
                         {this.renderDeleteButton()}
-                        <button className='edit-button'>Edit</button>
+                        {/* <button className='edit-button'>Edit</button> */}
                     </li>
                 </ul>
             </div>

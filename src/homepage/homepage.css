@@ -28,14 +28,15 @@
 }
 
 .sign-up-button:hover {
-  background-color: #583e88;
+  background-color: #024B6E;
   color: white;
   border: none;
 }
 
   @media screen and (min-width: 320px) {
     .home-page {
-      margin: 120px;
+      margin: 100px;
+      margin-top: 140px;
     }
 
     .home-page p {

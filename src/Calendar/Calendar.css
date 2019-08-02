@@ -1,15 +1,13 @@
 .calendar-page {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .calendar-page h2 {
-  display: flex;
-  justify-content: center;
-  text-shadow: 2px 3px 4px rgba(18,17,19)
-
+  text-shadow: 2px 3px 4px rgba(18,17,19);
+  padding: 10px;
 }
 
 .calendar-page ul {
@@ -17,19 +15,18 @@
 }
 
 .weekday {
-    box-shadow: 2px 4px 3px #1E1A1D;
-    background-color: rgba(18,17,19,0.85);
-    border-radius: 4px;
-    margin: 10px;
-    height: 300px;
-    min-width:300px;
-    font-size: 15px;
-    padding: 10px;
+  box-shadow: 2px 4px 3px #1E1A1D;
+  border-radius: 4px;
+  margin: 10px;
+  height: 370px;
+  min-width:325px;
+  font-size: 15px;
+  padding: 10px;
 }
 
 .event {
   background-color: rgba(18,17,19,0.85);
-  padding: 10px;
+  padding: 5px;
   border-radius: 3px;
   text-decoration:underline;
 }
@@ -49,32 +46,45 @@
   margin: auto;
 }
 
+.event-pic {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+
 
 @media only screen and (min-width: 320px) {
   .calendar-page {
-    flex-direction: row;
-    flex-wrap: wrap;
+
   }
+
   .calendar-table {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 10px;
   }
+
+  .event {
+    height: 355px;
+  }
+
 }
 
 @media only screen and (min-width: 725px) {
- 
+
 }
 
 
 @media only screen and (min-width: 1000px) {
   .calendar-page {
+      display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
   }
 
   .calendar-table {
       display: flex;
-      flex-wrap: wrap;
-  }
+    }
+
+  .calendar-page h2 {
+      margin: 100px;
+    }
 }

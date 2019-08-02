@@ -34,9 +34,8 @@ class Calendar extends React.Component{
                 console.error({ err }))
     };
     
-    render(){
+    render(){ 
         const {events = []}  = this.state;
-        console.log(events)
         return(
             <section className='calendar-page'>
                 <h2>Your Saved Events</h2>
@@ -48,6 +47,7 @@ class Calendar extends React.Component{
                             event_img={event.event_img}
                             event_date={event.event_date}
                             event={event.event}
+                            title={event.title}
                         />
                     )}
                 </section>

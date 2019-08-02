@@ -42,14 +42,27 @@
     font-size: 15px;
 }
 
+.sign-up-submit {
+    width: 40%;
+    border-radius:15px;
+    border: none;
+}
+
+.sign-up-submit:hover {
+    background-color: #024B6E;
+    color: white;
+}
+
 @media screen and (min-width: 320px) {
     .signup-page {
         margin: 100px;
     }
 }
 
-@media screen and (min-width: 765px) {
-
+@media screen and (min-width: 740px) {
+    .signup-page {
+        margin: 120px;
+    }
 }
 
 @media screen and (min-width: 1000px) { 
