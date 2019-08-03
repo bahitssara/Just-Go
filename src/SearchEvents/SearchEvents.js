@@ -57,12 +57,33 @@ class SearchEvents extends React.Component{
                 const data = responseJson.events.map(img => {
                     return img.performers
                 })
-                this.setState({
-                    searchResults: responseJson.events,
-                    img_url: data
-                })
-                console.log(this.state.searchResults)
-                console.log(this.state.img_url)
+                console.log(responseJson.events)
+                if(responseJson.events.length !== 0) {
+                    this.setState({
+                        searchResults: responseJson.events,
+                        img_url: data
+                    })
+                    console.log(this.state.searchResults)
+                    console.log(this.state.img_url)
+                } else {
+                    this.setState({
+                        searchResults: [{ 
+                            datetime_local: '',
+                            id: '',
+                            performers: [{
+                                image:'https://images.unsplash.com/photo-1499415479124-43c32433a620?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80'
+                            }],
+                            title: 'No Search Results',
+                            type: 'No events for this artist currently, search another!',
+                            url: '',
+                            venue: {
+                                name: ''
+                            }
+                        }]
+                    })
+                    console.log(this.state.searchResults)
+
+                }
             })
             .catch(error => {
                 console.error({ error })
@@ -113,7 +134,7 @@ class SearchEvents extends React.Component{
                                 {results.map(event => 
                                         <li className='search-li-item' key={event.id}>
                                         <a href={event.url} className='event-link' rel='noopener noreferrer' target='_blank'>{event.title}</a>
-                                        <img src={event.performers[0].image} alt='event'/>
+                                        <img src={event.performers[0].image} alt='event' className='event-photo'/>
                                         <p>Event Type:{event.type}</p>
                                         <p>{event.venue.name}</p>
                                         <span className='event-date'>Event Date: {format(event.datetime_local, 'ddd MM/DD/YYYY')}</span>

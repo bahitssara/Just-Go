@@ -3,7 +3,6 @@ import './HeaderLoginForm.css'
 import TokenService from '../services/token-service'
 import AuthApiService from '../services/auth-api-service'
 import ThisWeekContext from '../ThisWeekContext'
-import ValidationError from '../ValidationError/ValidationError'
 
 class HeaderLoginForm extends React.Component{
     static defaultProps = {
@@ -123,7 +122,7 @@ class HeaderLoginForm extends React.Component{
                         value={this.state.email}
                         onChange={e => this.addEmail(e.target.value)}
                     />
-                    <ValidationError className='validation-error'/>
+                    {/* <ValidationError className='validation-error'/> */}
                     <label htmlFor='email'>Password</label>
                     <input 
                         type='text'
@@ -132,11 +131,11 @@ class HeaderLoginForm extends React.Component{
                         value={this.state.password}
                         onChange={e => this.addPassword(e.target.value)}
                     />
-                    <ValidationError hasError={!this.state.passwordValid} message={this.state.validationMessages.password} />
+                    {/* <ValidationError hasError={!this.state.passwordValid} message={this.state.validationMessages.password} /> */}
+                    <button type='submit'>Sign In</button>
                     <div className="error" role="alert">
                             {error && <span className="login-error">{error}</span>}
                     </div>
-                    <button type='submit'>Sign In</button>
                 </form>
             </section>
         )

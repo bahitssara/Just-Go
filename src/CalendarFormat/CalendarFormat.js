@@ -8,6 +8,10 @@ import config from '../config'
 
 
 class CalendarFormat extends React.Component {
+    constructor(props) {
+        super(props) 
+        this.handleClickDelete = this.handleClickDelete.bind(this)
+    }
     static contextType = ThisWeekContext
 
     //only load delete button for logged in users 

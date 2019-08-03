@@ -31,18 +31,18 @@
   width: 600px;
   margin: auto;
   border-radius: 10px;
-  background-color: rgba(18,17,19,0.85);
 }
 
 .results-li {
   list-style-type: none;
   padding-left: 0;
+  background-color: rgba(18,17,19,0.85);
+  border-radius: 50px;
 }
 
 .search-li-item {
   margin: 5px;
-  border: 1px solid white;
-
+  border-radius: 50px;
 }
  
 .results a {
@@ -53,6 +53,7 @@
   display: block;
   margin: auto;
   border-radius: 40px;
+  width: 50%;
 }
 
  @media only screen and (min-width: 320px) {
@@ -92,5 +93,6 @@
     height: 600px;
     width: 600px;
     margin: auto;
+    
   }
 }
