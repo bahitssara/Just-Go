@@ -59,9 +59,20 @@
     }
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 760px) {
     .signup-page {
-        margin: 120px;
+        margin: 150px;
+    }
+
+    .sign-up-fieldset {
+        font-size: 30px;
+        width: 400px;
+    }
+
+    .signup-page input {
+        height: 40px;
+        font-size: 25px;
+
     }
 }
 

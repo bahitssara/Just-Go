@@ -25,6 +25,7 @@
   height: 50px;
   font-size: 30px;
   border-radius: 30px;
+  background-color: white;
 }
 
 .sign-up-button:hover {
@@ -35,8 +36,8 @@
 
   @media screen and (min-width: 320px) {
     .home-page {
-      margin: 100px;
-      margin-top: 140px;
+      margin: 20px;
+      margin-top: 130px;
     }
 
     .home-page p {
@@ -53,7 +54,16 @@
   
   @media screen and (min-width: 765px) {
     .home-page {
-      margin: 160px;
+      margin: 60px;
+      margin-top: 240px;
+    }
+
+    .home-page h2 {
+      font-size: 40px;
+    }
+
+    .home-page p {
+      font-size: 28px;
     }
   }
   
