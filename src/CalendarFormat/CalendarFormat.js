@@ -39,7 +39,7 @@ class CalendarFormat extends React.Component {
             })
             .then(() => {
                 this.context.deleteEvent(eventId);
-                window.location = '/api/events'
+                window.location.reload()
             })
             .catch(error => {
                 console.error({ error })
