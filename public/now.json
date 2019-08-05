@@ -1,7 +1,7 @@
 {
     "version": 2,
-    "alias": "this-week-app",
-    "name": "this-week",
+    "alias": "just-go-app",
+    "name": "just-go",
     "routes": [
         {
           "src": "^/static/(.*)",
