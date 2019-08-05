@@ -30,8 +30,16 @@
     border-radius: 4px;
 }
 
+.demo-login-info {
+    border: 1px solid #024B6E;
+    margin: auto;
+    margin-top: 10px;
+    width: 65%;
+    border-radius: 20px;
+}
+
 .demo-login-info h2 {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .demo-login-info p {

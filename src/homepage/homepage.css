@@ -34,6 +34,7 @@
   border: none;
 }
 
+
   @media screen and (min-width: 320px) {
     .home-page {
       margin: 20px;
@@ -55,9 +56,13 @@
       font-size: 18px;
       border-radius: 25px;
     }
+
+    .demo-login-info-home {
+      display: none;
+    }
   }
   
-  @media screen and (min-width: 765px) {
+  @media screen and (min-width: 720px) {
     .home-page {
       margin: 60px;
       margin-top: 240px;
@@ -68,7 +73,20 @@
     }
 
     .home-page p {
-      font-size: 28px;
+      font-size: 20px;
+    }
+
+    .demo-login-info-home {
+      display: block;
+      border: 1px solid #024B6E;
+      margin: auto;
+      margin-top: 10px;
+      width: 65%;
+      border-radius: 20px;
+    }
+    
+    .demo-login-info-home p {
+      padding: 0;
     }
   }
   
@@ -82,5 +100,11 @@
       height: 50px;
       font-size: 30px;
       border-radius: 30px;
+    }
+
+    .demo-login-info-home {
+      margin-top: 10px;
+      width: 35%;
+      border-radius: 20px;
     }
   }

@@ -18,7 +18,7 @@ class CalendarFormat extends React.Component {
     renderDeleteButton() {
         if (TokenService.getAuthToken()) {
             return (
-                <button className='delete-review-button' onClick={(e) => this.handleClickDelete(e)}>Delete</button>
+                <button className='delete-review-button' onClick={this.handleClickDelete}>Delete</button>
             )
         }
     }
@@ -39,7 +39,7 @@ class CalendarFormat extends React.Component {
             })
             .then(() => {
                 this.context.deleteEvent(eventId);
-                window.location.reload()
+                window.location = '/api/events'
             })
             .catch(error => {
                 console.error({ error })

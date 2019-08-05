@@ -27,9 +27,9 @@ header a {
   color: #583e88;
 }
 
-.fa-calendar-alt {
+.fa-grin-tongue {
   float: left;
-  padding: 10px;
+  padding: 8px;
 }
 
 .logout-link {
@@ -67,5 +67,6 @@ header a {
     display: inline-block;
     float: right;
     padding: 15px;
+    font-size: 30px;
   }
 }

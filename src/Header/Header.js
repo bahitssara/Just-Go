@@ -15,8 +15,8 @@ class Header extends React.Component{
     return (
         <div className='header-logged-in'>
             <Link to='/events'className='home-link'>
-              <h1>This Week
-              <i className='fas fa-calendar-alt'></i></h1>
+              <h1>Just Go
+              <i className='far fa-grin-tongue'></i></h1>
             </Link>
             <Link
                 className='logout-link'
@@ -32,8 +32,8 @@ class Header extends React.Component{
     return (
       <div>
         <Link to='/'className='home-link'>
-          <h1 className='home-link'>This Week
-            <i className='fas fa-calendar-alt'></i></h1>
+          <h1 className='home-link'>Just Go
+          <i className='far fa-grin-tongue'></i></h1>
         </Link>
         <Link to='/login' className='sign-in-link'>
           Login
