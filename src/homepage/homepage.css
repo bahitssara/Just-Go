@@ -50,6 +50,11 @@
       font-size: 80px;
       padding: 10px;
     }
+
+    .sign-up-button {
+      font-size: 18px;
+      border-radius: 25px;
+    }
   }
   
   @media screen and (min-width: 765px) {

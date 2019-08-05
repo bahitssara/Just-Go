@@ -20,9 +20,16 @@
 
 .search-form button {
   height: 30px;
-  border-radius: 3px;
+  border-radius: 10px;
   margin-top: 15px;
   width:30%;
+  background-color: white;
+  border: none;
+}
+
+.search-form button:hover {
+  background-color: #024B6E;
+  color: white;
 }
 
 .results {
@@ -36,17 +43,19 @@
 .results-li {
   list-style-type: none;
   padding-left: 0;
-  background-color: rgba(18,17,19,0.85);
   border-radius: 50px;
 }
 
 .search-li-item {
-  margin: 5px;
+  margin: 10px;
   border-radius: 50px;
+  background-color: rgba(18,17,19,0.85);
+
 }
  
 .results a {
   color: white;
+  margin: 15px;
 }
 
 .event-photo {
@@ -62,6 +71,10 @@
     width: 320px;
     margin: auto;
     font-size: 15px;
+  }
+
+  .search-li-item {
+    border: 1px #024B6E solid;
   }
 }
 

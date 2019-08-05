@@ -10,7 +10,7 @@ class Header extends React.Component{
     TokenService.clearAuthToken()
     TokenService.clearUserId()
   }
-
+ 
   renderLogoutLink() {
     return (
         <div className='header-logged-in'>

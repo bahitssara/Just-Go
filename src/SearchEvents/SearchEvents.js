@@ -20,6 +20,7 @@ class SearchEvents extends React.Component{
             event: '',
             event_date: '',
             event_img: '',
+            event_type: '',
             user_id: ''
         }
         this.handleSearch = this.handleSearch.bind(this)
@@ -77,7 +78,8 @@ class SearchEvents extends React.Component{
                             type: 'No events for this artist currently, search another!',
                             url: '',
                             venue: {
-                                name: ''
+                                name: '',
+                                display_location:''
                             }
                         }]
                     })
@@ -93,7 +95,7 @@ class SearchEvents extends React.Component{
     handleEventSubmit = ev => {
         ev.preventDefault();
         this.setState({ error: null })
-        const { weekday, title, event_url, event, event_date, event_img } = ev.target
+        const { weekday, title, event_url, event, event_date, event_img, event_type } = ev.target
 
         EventsApiService.postEvent({
             user_id: TokenService.getUserId(),
@@ -101,6 +103,7 @@ class SearchEvents extends React.Component{
             title: title.value,
             event_url: event_url.value,
             event: event.value,
+            event_type: event_type.value,
             event_date: event_date.value,
             event_img: event_img.value
         })
@@ -109,6 +112,7 @@ class SearchEvents extends React.Component{
                 title.value = '',
                 event_url.value = '',
                 event.value = '',
+                event_type.value = '',
                 event_date.value = '',
                 event_img.value = ''
             )
@@ -136,12 +140,14 @@ class SearchEvents extends React.Component{
                                         <a href={event.url} className='event-link' rel='noopener noreferrer' target='_blank'>{event.title}</a>
                                         <img src={event.performers[0].image} alt='event' className='event-photo'/>
                                         <p>Event Type:{event.type}</p>
+                                        <p>{event.venue.display_location}</p>
                                         <p>{event.venue.name}</p>
                                         <span className='event-date'>Event Date: {format(event.datetime_local, 'ddd MM/DD/YYYY')}</span>
                                         <AddEvent 
                                            title={event.title} 
                                            weekday={event.datetime_local}
-                                           event={event.type}
+                                           event_type={event.type}
+                                           event={event.venue.display_location}
                                            event_url={event.url}
                                            event_date={event.datetime_local}
                                            event_img={event.performers[0].image}

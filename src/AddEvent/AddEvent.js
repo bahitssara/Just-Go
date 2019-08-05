@@ -9,6 +9,7 @@ export default function AddEvent(props) {
                 <input type='hidden' id='weekday' name='weekday' value={format(props.weekday, 'dddd')} />
                 <input type='hidden' id='title' name='title' value={props.title} />
                 <input type='hidden' id='event_url' name='event_url' value={props.event_url} />
+                <input type='hidden' id='event_type' name='event_type' value={props.event_type} />
                 <input type='hidden' id='event' name='event' value={props.event} />
                 <input type='hidden' id='event_date' name='event_date' value={props.event_date} />
                 <input type='hidden' id='event_img' name='event_img' value={props.event_img} />

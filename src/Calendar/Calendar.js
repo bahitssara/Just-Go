@@ -47,6 +47,7 @@ class Calendar extends React.Component{
                             event_img={event.event_img}
                             event_date={event.event_date}
                             event={event.event}
+                            event_type={event.event_type}
                             title={event.title}
                         />
                     )}

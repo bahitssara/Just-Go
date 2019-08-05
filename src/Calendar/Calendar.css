@@ -36,9 +36,23 @@
   color: white;
 }
 
-.delete-button {
-  display: block;
-  margin: auto;
+.event-link:hover {
+  color: #024B6E;
+  font-size:16px;
+}
+
+
+.delete-review-button {
+  background-color: white;
+  width: 25%;
+  height: 22px;
+  border-radius: 10px;
+  border: none;
+}
+
+.delete-review-button:hover {
+  background-color: #024B6E;
+  color: white;
 }
 
 .edit-button {
