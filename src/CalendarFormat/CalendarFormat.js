@@ -22,7 +22,7 @@ class CalendarFormat extends React.Component {
             )
         }
     }
-
+ 
     handleClickDelete = e => {
         e.preventDefault();
         const eventId = this.props.id
