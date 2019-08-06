@@ -63,9 +63,9 @@ header a {
 
 @media only screen and (min-width: 1000px) {
   .home-link {
-      display: inline-block;
-      float: left;
-    }
+    display: inline-block;
+    float: left;
+  }
 
    .sign-in-link {
     display: none;

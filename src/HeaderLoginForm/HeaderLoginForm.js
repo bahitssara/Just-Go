@@ -4,9 +4,9 @@ import TokenService from '../services/token-service'
 import AuthApiService from '../services/auth-api-service'
 import ThisWeekContext from '../ThisWeekContext'
 
-class HeaderLoginForm extends React.Component{
+class HeaderLoginForm extends React.Component {
     static defaultProps = {
-        onLoginSuccess: () => {}
+        onLoginSuccess: () => { }
     };
 
     constructor(props) {
@@ -111,11 +111,11 @@ class HeaderLoginForm extends React.Component{
 
     render() {
         const { error } = this.state;
-        return(
+        return (
             <section className='sign-in'>
                 <form className='sign-in-form' onSubmit={this.handleSubmitJwtAuth}>
                     <label htmlFor='email'>Email</label>
-                    <input 
+                    <input
                         type='text'
                         name='email'
                         id='email'
@@ -124,7 +124,7 @@ class HeaderLoginForm extends React.Component{
                     />
                     {/* <ValidationError className='validation-error'/> */}
                     <label htmlFor='email'>Password</label>
-                    <input 
+                    <input
                         type='password'
                         name='password'
                         id='password'
@@ -134,7 +134,7 @@ class HeaderLoginForm extends React.Component{
                     {/* <ValidationError hasError={!this.state.passwordValid} message={this.state.validationMessages.password} /> */}
                     <button type='submit'>Sign In</button>
                     <div className="error" role="alert">
-                            {error && <span className="login-error">{error}</span>}
+                        {error && <span className="login-error">{error}</span>}
                     </div>
                 </form>
             </section>

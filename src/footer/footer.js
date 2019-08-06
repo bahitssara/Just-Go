@@ -3,7 +3,7 @@ import './footer.css'
 
 
 export default function footer() {
-    return(
+    return (
         <footer>
             Search Powered by: SeatGeekAPI
         </footer>

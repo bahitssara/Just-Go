@@ -1,11 +1,10 @@
 import React from 'react'
-import './CalendarFormat.css'
 import ThisWeekContext from '../ThisWeekContext'
 import TokenService from '../services/token-service'
 import { format } from 'date-fns'
 import config from '../config'
 
- 
+
 
 class CalendarFormat extends React.Component {
     static contextType = ThisWeekContext
@@ -18,7 +17,7 @@ class CalendarFormat extends React.Component {
             )
         }
     }
- 
+
     handleClickDelete = e => {
         e.preventDefault();
         const eventId = this.props.id

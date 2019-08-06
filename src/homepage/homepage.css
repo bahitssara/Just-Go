@@ -38,81 +38,81 @@
 }
 
 
-  @media screen and (min-width: 320px) {
-    .home-page {
-      margin: 20px;
-      margin-top: 130px;
-    }
+@media screen and (min-width: 320px) {
+  .home-page {
+    margin: 20px;
+    margin-top: 130px;
+  }
 
-    .home-page p {
-      font-size: 16px;
-      padding: 15px;
-      margin: auto;
-    }
-    
-    .home-page i {
-      font-size: 80px;
-      padding: 10px;
-    }
-
-    .sign-up-button {
-      font-size: 18px;
-      border-radius: 25px;
-    }
-
-    .demo-login-info-home {
-      display: none;
-    }
+  .home-page p {
+    font-size: 16px;
+    padding: 15px;
+    margin: auto;
   }
   
-  @media screen and (min-width: 720px) {
-    .home-page {
-      margin: 60px;
-      margin-top: 240px;
-    }
+  .home-page i {
+    font-size: 80px;
+    padding: 10px;
+  }
 
-    .home-page h2 {
-      font-size: 40px;
-    }
+  .sign-up-button {
+    font-size: 18px;
+    border-radius: 25px;
+  }
 
-    .home-page p {
-      font-size: 20px;
-    }
+  .demo-login-info-home {
+    display: none;
+  }
+}
+  
+@media screen and (min-width: 720px) {
+  .home-page {
+    margin: 60px;
+    margin-top: 240px;
+  }
 
-    .demo-login-info-home {
-      display: block;
-      border: 1px solid #024B6E;
-      margin: auto;
-      margin-top: 10px;
-      width: 65%;
-      border-radius: 20px;
-    }
+  .home-page h2 {
+    font-size: 40px;
+  }
 
-    .demo-login-info-home h4 {
-      padding: 0;
-    }
-    
-    .demo-login-info-home p {
-      padding: 0;
-      font-size: 15px;
-    }
+  .home-page p {
+    font-size: 20px;
+  }
+
+  .demo-login-info-home {
+    display: block;
+    border: 1px solid #024B6E;
+    margin: auto;
+    margin-top: 10px;
+    width: 65%;
+    border-radius: 20px;
+  }
+
+  .demo-login-info-home h4 {
+    padding: 0;
   }
   
-  @media screen and (min-width: 1000px) { 
-    .home-page {
-      margin: 160px;
-    }
-
-    .sign-up-button {
-      width: 25%;
-      height: 50px;
-      font-size: 30px;
-      border-radius: 30px;
-    }
-
-    .demo-login-info-home {
-      margin-top: 10px;
-      width: 35%;
-      border-radius: 20px;
-    }
+  .demo-login-info-home p {
+    padding: 0;
+    font-size: 15px;
   }
+}
+
+@media screen and (min-width: 1000px) { 
+  .home-page {
+    margin: 160px;
+  }
+
+  .sign-up-button {
+    width: 25%;
+    height: 50px;
+    font-size: 30px;
+    border-radius: 30px;
+  }
+
+  .demo-login-info-home {
+    margin-top: 10px;
+    width: 35%;
+    border-radius: 20px;
+  }
+}

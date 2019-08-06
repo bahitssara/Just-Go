@@ -1,12 +1,13 @@
 .signup-page {
-    margin: 170px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 100px;
 }
 
 .signup-page h3{
-    flex-direction: row;
+    margin-top:120px;
+    width: 100%;
     text-shadow: 2px 3px 4px rgba(18,17,19);
     font-family: 'Orbitron', sans-serif;
 }
@@ -49,7 +50,6 @@
     border-radius:15px;
     border: none;
     font-family: 'Orbitron', sans-serif;
-
 }
 
 .sign-up-submit:hover {
@@ -59,28 +59,35 @@
 
 @media screen and (min-width: 320px) {
     .signup-page {
-        margin: 100px;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .demo-video {
+        display: none;
     }
 }
 
 @media screen and (min-width: 730px) {
-    .signup-page {
-        margin: 150px;
-    }
-
     .sign-up-fieldset {
-        font-size: 30px;
+        font-size: 20px;
         width: 400px;
     }
 
     .signup-page input {
         height: 40px;
         font-size: 25px;
-
     }
 }
 
 @media screen and (min-width: 1000px) { 
+    .signup-page {
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+    }
+
     .signup-page h3{
         font-size: 30px;
     }
@@ -92,5 +99,12 @@
 
     .validation-error {
         font-size: 15px;
+    }
+
+    .demo-video {
+        display: flex;
+        width: 630px;
+        height: 300px;
+        margin: 50px;
     }
 }

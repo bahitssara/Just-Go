@@ -5,7 +5,7 @@ import ThisWeekContext from '../ThisWeekContext'
 import TokenService from '../services/token-service'
 import CalendarFormat from '../CalendarFormat/CalendarFormat';
 
-class Calendar extends React.Component{
+class Calendar extends React.Component {
 
     state = {
         events: []
@@ -18,7 +18,7 @@ class Calendar extends React.Component{
         const user = TokenService.getUserId()
         fetch(`${config.API_ENDPOINT}/api/myevents/${user}`, {
             headers: {
-            'authorization': `bearer ${TokenService.getAuthToken()}`,
+                'authorization': `bearer ${TokenService.getAuthToken()}`,
             },
         })
             .then(res => {
@@ -33,24 +33,25 @@ class Calendar extends React.Component{
             }).catch(err =>
                 console.error({ err }))
     };
-    
-    render(){ 
-        const {events = []}  = this.state;
-        return(
+
+    render() {
+        const { events = [] } = this.state;
+        return (
             <section className='calendar-page'>
-                    {events.map(event => 
-                        <CalendarFormat 
-                            key={event.id}
-                            id={event.id}
-                            event_url={event.event_url}
-                            event_img={event.event_img}
-                            event_date={event.event_date}
-                            event={event.event}
-                            event_type={event.event_type}
-                            title={event.title}
-                        />
-                    )}
-                </section>
+                <h2>Your saved events</h2>
+                {events.map(event =>
+                    <CalendarFormat
+                        key={event.id}
+                        id={event.id}
+                        event_url={event.event_url}
+                        event_img={event.event_img}
+                        event_date={event.event_date}
+                        event={event.event}
+                        event_type={event.event_type}
+                        title={event.title}
+                    />
+                )}
+            </section>
         )
     }
 }

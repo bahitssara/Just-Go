@@ -3,7 +3,7 @@ import { format } from 'date-fns'
 import './AddEvent.css'
 
 export default function AddEvent(props) {
-    return(
+    return (
         <section className='add-event-page'>
             <form className='add-event-form' onSubmit={(e) => props.onAddEvent(e)}>
                 <input type='hidden' id='weekday' name='weekday' value={format(props.weekday, 'dddd')} />

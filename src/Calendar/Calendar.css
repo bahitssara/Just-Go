@@ -8,7 +8,8 @@
 .calendar-page h2 {
   font-family: 'Orbitron', sans-serif;
   text-shadow: 2px 3px 4px rgba(18,17,19);
-  padding: 10px;
+  /* padding: 10px; */
+  width: 100%;
 }
 
 .calendar-page ul {
@@ -20,13 +21,13 @@
   border-radius: 4px;
   margin: 10px;
   height: 340px;
-  min-width:325px;
+  max-width:325px;
   font-size: 15px;
   padding: 10px;
 }
 
 .event {
-  background-color: rgba(18,17,19,0.85);
+  background-color: rgba(18,17,19,0.95);
   padding: 5px;
   border-radius: 3px;
 }
@@ -34,7 +35,6 @@
 .event-link {
   display: block;
   color: white;
-  padding: 10px;
 }
 
 .event-link:hover {
@@ -76,26 +76,17 @@
 }
 
 @media only screen and (min-width: 725px) {
-    .calendar-page {
-      display: flex;
-      justify-content: flex-end;
-      justify-content: center;
-  }
-
-  .calendar-page h2 {
-    margin: 85px;
+  .calendar-page {
+    display: flex;
+    justify-content: flex-end;
+    justify-content: center;
   }
 }
 
 
 @media only screen and (min-width: 1000px) {
   .calendar-page {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+    overflow: scroll;
+    max-height: 800px;
   }
-
-  .calendar-page h2 {
-      margin: 85px;
-    }
 }

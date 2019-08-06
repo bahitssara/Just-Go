@@ -5,7 +5,7 @@ import Calendar from '../Calendar/Calendar'
 
 class EventPage extends React.Component {
     render() {
-        return(
+        return (
             <section className='event-page'>
                 <SearchEvents />
                 <Calendar />

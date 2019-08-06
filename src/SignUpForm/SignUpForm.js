@@ -1,10 +1,11 @@
 import React from 'react'
 import './SignUpForm.css'
 import ThisWeekContext from '../ThisWeekContext'
+import demoMovie from './JustGoDemo.mp4'
 import AuthApiService from '../services/auth-api-service'
 import ValidationError from '../ValidationError/ValidationError'
 
-class SignUpForm extends React.Component{
+class SignUpForm extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -167,9 +168,12 @@ class SignUpForm extends React.Component{
     static contextType = ThisWeekContext;
     render() {
         const { error } = this.state
-        return(
+        return (
             <section className='signup-page'>
                 <h3>Sign Up To Start</h3>
+                <video className='demo-video' autoPlay muted controls>
+                    <source src={demoMovie} type='video/mp4' />
+                </video>
                 <form className='sign-up-main' onSubmit={this.handleAddUser}>
                     <fieldset className='sign-up-fieldset'>
                         <label>First Name</label>
@@ -179,7 +183,7 @@ class SignUpForm extends React.Component{
                             id='first-name-input'
                             onChange={e => this.addFirstName(e.target.value)}
                         />
-                        <ValidationError hasError={!this.state.first_nameValid} message={this.state.validationMessages.first_name} />                       
+                        <ValidationError hasError={!this.state.first_nameValid} message={this.state.validationMessages.first_name} />
                         <label>Last Name</label>
                         <input
                             type='text'

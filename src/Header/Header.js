@@ -5,54 +5,54 @@ import TokenService from '../services/token-service'
 import HeaderLoginForm from '../HeaderLoginForm/HeaderLoginForm';
 
 
-class Header extends React.Component{ 
+class Header extends React.Component {
   handleLogoutClick = () => {
     TokenService.clearAuthToken()
     TokenService.clearUserId()
   }
- 
+
   renderLogoutLink() {
     return (
-        <div className='header-logged-in'>
-            <Link to='/events'className='home-link'>
-              <h1>Just Go
+      <div className='header-logged-in'>
+        <Link to='/events' className='home-link'>
+          <h1>Just Go
               <i className='far fa-grin-tongue'></i></h1>
-            </Link>
-            <Link
-                className='logout-link'
-                onClick={this.handleLogoutClick}
-                to='/'>
-                <span title='Logout' className='logout'>Logout<i className="fas fa-sign-out-alt" /></span>
-            </Link>
-        </div>
+        </Link>
+        <Link
+          className='logout-link'
+          onClick={this.handleLogoutClick}
+          to='/'>
+          <span title='Logout' className='logout'>Logout<i className="fas fa-sign-out-alt" /></span>
+        </Link>
+      </div>
     )
   }
 
   renderLoginLink() {
     return (
       <div>
-        <Link to='/'className='home-link'>
+        <Link to='/' className='home-link'>
           <h1 className='home-link'>Just Go
           <i className='far fa-grin-tongue'></i></h1>
         </Link>
         <Link to='/login' className='sign-in-link'>
           Login
-          <i className='fas fa-sign-in-alt'/>
+          <i className='fas fa-sign-in-alt' />
         </Link>
-          <HeaderLoginForm />
+        <HeaderLoginForm />
       </div>
     )
   }
 
-    render() {
-        return(
-          <header className='header'>
-          {TokenService.hasAuthToken()
-                  ? this.renderLogoutLink()
-                  : this.renderLoginLink()}
-          </header>
-        )
-    }
+  render() {
+    return (
+      <header className='header'>
+        {TokenService.hasAuthToken()
+          ? this.renderLogoutLink()
+          : this.renderLoginLink()}
+      </header>
+    )
+  }
 }
 
 export default Header;

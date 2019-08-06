@@ -26,34 +26,34 @@
     color: white;
   }
   
-  @media only screen and (min-width: 320px) {
-    .sign-in-form {
-      display: none;
-    }
+@media only screen and (min-width: 320px) {
+  .sign-in-form {
+    display: none;
+  }
+}
+  
+@media only screen and (min-width: 720px) {
+  .sign-in-form {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+  }
+
+  header button {
+    font-size: 20px;
+  }
   }
   
-  @media only screen and (min-width: 720px) {
-    .sign-in-form {
-      display: flex;
-      justify-content: center;
-      margin: 15px;
-    }
-
-    header button {
-      font-size: 20px;
-    }
+@media only screen and (min-width: 1000px) {
+  .sign-in-form {
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
   }
-  
-  @media only screen and (min-width: 1000px) {
-     .sign-in-form {
-       display: inline-block;
-       float: right;
-       margin-top: 10px;
-     }
 
-     header button {
-      float: right;
-      height: 30px;
-      margin:4.2px;
-    }
+  header button {
+    float: right;
+    height: 30px;
+    margin:4.2px;
   }
+}

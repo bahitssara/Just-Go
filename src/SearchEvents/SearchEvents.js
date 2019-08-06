@@ -7,7 +7,7 @@ import EventsApiService from '../services/events-api-service'
 import AddEvent from '../AddEvent/AddEvent'
 import TokenService from '../services/token-service'
 
-class SearchEvents extends React.Component{
+class SearchEvents extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -35,7 +35,7 @@ class SearchEvents extends React.Component{
         })
         this.handleSearch(value)
     }
-        
+
     //search SeatGeek API for concerts
     handleSearch(query) {
         const auth = config.EVENT_API_KEY;
@@ -59,7 +59,7 @@ class SearchEvents extends React.Component{
                     return img.performers
                 })
                 console.log(responseJson.events)
-                if(responseJson.events.length !== 0) {
+                if (responseJson.events.length !== 0) {
                     this.setState({
                         searchResults: responseJson.events,
                         img_url: data
@@ -68,18 +68,18 @@ class SearchEvents extends React.Component{
                     console.log(this.state.img_url)
                 } else {
                     this.setState({
-                        searchResults: [{ 
+                        searchResults: [{
                             datetime_local: '',
                             id: '',
                             performers: [{
-                                image:'https://images.unsplash.com/photo-1499415479124-43c32433a620?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80'
+                                image: 'https://images.unsplash.com/photo-1499415479124-43c32433a620?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1789&q=80'
                             }],
                             title: 'No Search Results',
                             type: 'No events for this artist currently, search another!',
                             url: '',
                             venue: {
                                 name: '',
-                                display_location:''
+                                display_location: ''
                             }
                         }]
                     })
@@ -120,43 +120,43 @@ class SearchEvents extends React.Component{
                 this.setState({ error: res.error })
             })
     }
-    
+
     static contextType = ThisWeekContext;
-    render() { 
-        const results = this.state.searchResults        
-        return(
+    render() {
+        const results = this.state.searchResults
+        return (
             <section className='search-bar'>
                 <form className='search-form' onSubmit={e => this.updateState(e)}>
-                        <label htmlFor='search-input'>Search a city, event or musician and <span className='just-go'>Just Go!</span>
+                    <label htmlFor='search-input'>Search a city, event or musician and <span className='just-go'>Just Go!</span>
                         <input type='text' name='search_input' id='search_input' ref={input => (this.input = input)} />
-                        </label>
-                        <button type='submit' className='search-button' >Search</button>
+                    </label>
+                    <button type='submit' className='search-button' >Search</button>
                 </form>
                 <h3>Results</h3>
-                        <div className='results'>
-                            <ul className='results-li'>
-                                {results.map(event => 
-                                        <li className='search-li-item' key={event.id}>
-                                        <a href={event.url} className='event-link' rel='noopener noreferrer' target='_blank'>{event.title}</a>
-                                        <img src={event.performers[0].image} alt='event' className='event-photo'/>
-                                        <p>Event Type:{event.type}</p>
-                                        <p>{event.venue.display_location}</p>
-                                        <p>{event.venue.name}</p>
-                                        <span className='event-date'>Event Date: {format(event.datetime_local, 'ddd MM/DD/YYYY')}</span>
-                                        <AddEvent 
-                                           title={event.title} 
-                                           weekday={event.datetime_local}
-                                           event_type={event.type}
-                                           event={event.venue.display_location}
-                                           event_url={event.url}
-                                           event_date={event.datetime_local}
-                                           event_img={event.performers[0].image}
-                                           onAddEvent = {(e) => this.handleEventSubmit(e)}
-                                        />
-                                    </li>       
-                                )}
-                             </ul> 
-                        </div>
+                <div className='results'>
+                    <ul className='results-li'>
+                        {results.map(event =>
+                            <li className='search-li-item' key={event.id}>
+                                <a href={event.url} className='event-link' rel='noopener noreferrer' target='_blank'>{event.title}</a>
+                                <img src={event.performers[0].image} alt='event' className='event-photo' />
+                                <p>Event Type:{event.type}</p>
+                                <p>{event.venue.display_location}</p>
+                                <p>{event.venue.name}</p>
+                                <span className='event-date'>Event Date: {format(event.datetime_local, 'ddd MM/DD/YYYY')}</span>
+                                <AddEvent
+                                    title={event.title}
+                                    weekday={event.datetime_local}
+                                    event_type={event.type}
+                                    event={event.venue.display_location}
+                                    event_url={event.url}
+                                    event_date={event.datetime_local}
+                                    event_img={event.performers[0].image}
+                                    onAddEvent={(e) => this.handleEventSubmit(e)}
+                                />
+                            </li>
+                        )}
+                    </ul>
+                </div>
             </section>
         )
     }

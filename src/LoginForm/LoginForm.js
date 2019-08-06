@@ -5,9 +5,9 @@ import AuthApiService from '../services/auth-api-service'
 import ThisWeekContext from '../ThisWeekContext'
 import ValidationError from '../ValidationError/ValidationError'
 
-class LoginForm extends React.Component{
+class LoginForm extends React.Component {
     static defaultProps = {
-        onLoginSuccess: () => {}
+        onLoginSuccess: () => { }
     };
 
     constructor(props) {
@@ -112,38 +112,38 @@ class LoginForm extends React.Component{
 
     render() {
         const { error } = this.state;
-        return(
+        return (
             <section className='sign-in'>
                 <form className='sign-in-page' onSubmit={this.handleSubmitJwtAuth}>
                     <fieldset>
-                    <label htmlFor='email'>Email</label>
-                    <input 
-                        type='text'
-                        name='email'
-                        id='email'
-                        value={this.state.email}
-                        onChange={e => this.addEmail(e.target.value)}
-                    />
-                    <ValidationError className='validation-error'/>
-                    <label htmlFor='email'>Password</label>
-                    <input 
-                        type='password'
-                        name='password'
-                        id='password'
-                        value={this.state.password}
-                        onChange={e => this.addPassword(e.target.value)}
-                    />
-                    <ValidationError hasError={!this.state.passwordValid} message={this.state.validationMessages.password} />
-                    <div className='error' role='alert'>
+                        <label htmlFor='email'>Email</label>
+                        <input
+                            type='text'
+                            name='email'
+                            id='email'
+                            value={this.state.email}
+                            onChange={e => this.addEmail(e.target.value)}
+                        />
+                        <ValidationError className='validation-error' />
+                        <label htmlFor='email'>Password</label>
+                        <input
+                            type='password'
+                            name='password'
+                            id='password'
+                            value={this.state.password}
+                            onChange={e => this.addPassword(e.target.value)}
+                        />
+                        <ValidationError hasError={!this.state.passwordValid} message={this.state.validationMessages.password} />
+                        <div className='error' role='alert'>
                             {error && <span className='login-error'>{error}</span>}
                             <p>*Email/Password are case sensitive</p>
-                    </div>
-                    <button type='submit'>Sign In</button>
-                    <section className='demo-login-info'>
+                        </div>
+                        <button type='submit'>Sign In</button>
+                        <section className='demo-login-info'>
                             <h2>Demo login info:</h2>
                             <p>Email: testuser@email.com</p>
                             <p>Password: TestUser101!</p>
-                    </section>
+                        </section>
                     </fieldset>
                 </form>
             </section>

@@ -49,8 +49,8 @@ class App extends React.Component {
       error
     })
   }
-  
-  render(){
+
+  render() {
     const contextValue = {
       user: this.state.user,
       events: this.state.event,
@@ -64,11 +64,11 @@ class App extends React.Component {
     return (
       <ThisWeekContext.Provider value={contextValue}>
         <main className='App'>
-          <Route path='/' component={Header}/>
-          <Route path='/' component={HomePage} exact/>
-          <Route path='/signup' component={SignUpForm} exact/>
-          <Route path='/events' component={EventPage} exact/>
-          <Route path='/login' component={LoginForm} exact/>
+          <Route path='/' component={Header} />
+          <Route path='/' component={HomePage} exact />
+          <Route path='/signup' component={SignUpForm} exact />
+          <Route path='/events' component={EventPage} exact />
+          <Route path='/login' component={LoginForm} exact />
           <Route path='/' component={Footer} />
         </main>
       </ThisWeekContext.Provider>
