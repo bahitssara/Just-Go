@@ -1,68 +1,71 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Just Go
+Just Go is an app that allows you to search events by name, location or type and then save them to your profile to potentially purchase later. It uses SeatGeek API to facilitate the search feature and links you to their site to purchase tickets! Stop saying maybe, and Just Go! <br>
+
+<a href="https://github.com/bahitssara/just-go-api" target="_blank">Just Go API Repo</a><br>
+<a href="https://github.com/bahitssara/Just-Go" target="_blank">Just Go Client Repo</a><br>
+<a href="https://just-go-app.now.sh/" target="_blank">Live Just Go Application</a>
+
+## Motivation
+As an avid concert goer, I have a very hard time remembering what events are in my area, or which I was planning on attending! From that experience, I came up with the idea for Just Go. This app not only allows you to search concerts but any listed local events that may require a ticket purchase. This app is an easy way for people like me to never forget an event they may want to attend, or even just entertain their wishful thinking and save them just in case!
+
+## <u>User-stories, UX Wireframes, Screenshots</u>
+![User stories](images/user-stories.png)
+#### As a user I want to create an account
+![Welcome Page](images/wire-frame-home.png)
+
+![SignUp Page](images/wire-frame-sign-up.png)
+#### As a user I want to search events
+![Search page](images/wire-frame-events.png)
+
+
+## <Center>Desktop view</center>
+#### Home page
+![Desktop home page](images/home-page.png)
+#### Registration page
+![Sign Up Page](images/sign-up-page.png)
+#### Events page
+![Events Page](images/events-page.png)
+
+## Summary
+Sign up, search events by location, event type, artist, musician, venue, ANYTHING. Save these events to your profile to either remember the events you're already attending OR save them to get tickets when you can. Whether it's wishful thinking or a full on game plan, Just Go!
+
+## Built with
+  ### Front end
+    -HTML
+    -Javascript
+    -React
+    -CSS
+
+  ### Back end
+    -Node.js
+    -Express.js
+    -PostgreSQL
+    -Mocha and Chai for testing
+
+  ### 3rd Party API
+  #### SeatGeek
+  For issues or questions visit their API support page.
+  <a href="https://github.com/seatgeek/api-support" target="_blank">SeatGeek API Support</a><br>
+
+## Development road map
+  * Allow for manual addition of events for any event that doesn't populate in the search, but you still want to remember to attend.
+  * See other's saved events and allow for sharing.
+  * Add an 'Attending' badge if you have already purchased tickets.
+
 
 ## Available Scripts
 
-In the project directory, you can run:
+### Node Js
+  ```npm install``` - Installs node modules<br>
+  ```npm run dev```- Starts development/node server<br>
+  ```npm test``` - Runs tests
 
-### `npm start`
+### React
+  ```npm install``` - Installs node modules<br>
+  ```npm test``` - Runs tests
+  ```npm start``` - Runs React App in development mode<br>
+  Open [http://localhost:3000](http://localhost:3000) to view it in the browser.<br>
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
