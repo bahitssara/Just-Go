@@ -7,7 +7,8 @@
 
 .signup-page h3{
     flex-direction: row;
-    text-shadow: 2px 3px 4px rgba(18,17,19)
+    text-shadow: 2px 3px 4px rgba(18,17,19);
+    font-family: 'Orbitron', sans-serif;
 }
 
 .sign-up-fieldset {
@@ -47,6 +48,8 @@
     width: 40%;
     border-radius:15px;
     border: none;
+    font-family: 'Orbitron', sans-serif;
+
 }
 
 .sign-up-submit:hover {
@@ -78,5 +81,16 @@
 }
 
 @media screen and (min-width: 1000px) { 
+    .signup-page h3{
+        font-size: 30px;
+    }
 
+    .sign-up-submit {
+        font-size: 16px;
+        height: 40px;
+    }
+
+    .validation-error {
+        font-size: 15px;
+    }
 }

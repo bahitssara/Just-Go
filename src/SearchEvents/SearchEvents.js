@@ -127,7 +127,7 @@ class SearchEvents extends React.Component{
         return(
             <section className='search-bar'>
                 <form className='search-form' onSubmit={e => this.updateState(e)}>
-                        <label htmlFor='search-input'>Search a city, event or musician and Just Go!
+                        <label htmlFor='search-input'>Search a city, event or musician and <span className='just-go'>Just Go!</span>
                         <input type='text' name='search_input' id='search_input' ref={input => (this.input = input)} />
                         </label>
                         <button type='submit' className='search-button' >Search</button>

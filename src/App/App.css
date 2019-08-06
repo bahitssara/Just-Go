@@ -1,10 +1,9 @@
 * {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 body {
-  font-family: "Open Sans",
-  sans-serif; 
   font-size: 20px;
   color: #444;
   line-height: 1.5;
@@ -21,10 +20,3 @@ nav,
 footer {
   padding: 1% 0;
 }
-
-
-/* skin/tan EFC69B
- reddish pink AF1B3F
- dark purple 473144
- tan CCB69B
-peach DF9B6D */

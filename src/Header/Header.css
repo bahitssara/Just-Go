@@ -17,8 +17,10 @@ header h1 {
   font-size: 25px;
   margin: 0;
   color: white;
-}
+  font-family: 'Orbitron', sans-serif;
 
+}
+ 
 header a {
   text-decoration: none;
 }
@@ -32,15 +34,21 @@ header a {
   padding: 8px;
 }
 
-.logout-link {
+.logout {
   color: white;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .sign-in-link {
   color: white;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .sign-in-link:hover {
+  color: #583e88;
+}
+
+.logout-link:hover {
   color: #583e88;
 }
 

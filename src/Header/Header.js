@@ -22,7 +22,7 @@ class Header extends React.Component{
                 className='logout-link'
                 onClick={this.handleLogoutClick}
                 to='/'>
-                <span title='Logout'>Logout<i className="fas fa-sign-out-alt" /></span>
+                <span title='Logout' className='logout'>Logout<i className="fas fa-sign-out-alt" /></span>
             </Link>
         </div>
     )

@@ -38,7 +38,6 @@ class Calendar extends React.Component{
         const {events = []}  = this.state;
         return(
             <section className='calendar-page'>
-                <h2>Your Saved Events</h2>
                     {events.map(event => 
                         <CalendarFormat 
                             key={event.id}

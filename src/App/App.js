@@ -55,7 +55,7 @@ class App extends React.Component {
       user: this.state.user,
       events: this.state.event,
       searchResults: this.state.searchResults,
-      deleteEvents: this.handleDeleteEvent,
+      deleteEvent: this.handleDeleteEvent,
       editreview: this.handleEditEvent,
       addReview: this.handleAddEvent,
       error: this.state.error

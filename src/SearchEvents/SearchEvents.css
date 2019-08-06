@@ -1,12 +1,19 @@
 .search-bar {
     display: flex;
-    margin-top: 100px;
     margin-left: 20px;
     margin-right: 20px;
     justify-content: center;
     flex-direction: column;
     box-shadow: 2px 4px 3px #1E1A1D;
     background-color: rgba(18,17,19,0.85);
+}
+
+.search-bar h3 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.just-go {
+  font-family: 'Orbitron', sans-serif;
 }
 
 .search-form input {
@@ -25,6 +32,7 @@
   width:30%;
   background-color: white;
   border: none;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .search-form button:hover {
@@ -50,7 +58,6 @@
   margin: 10px;
   border-radius: 50px;
   background-color: rgba(18,17,19,0.85);
-
 }
  
 .results a {
@@ -75,6 +82,10 @@
 
   .search-li-item {
     border: 1px #024B6E solid;
+  }
+
+  .search-form button {
+    font-size: 18px;
   }
 }
 
@@ -106,6 +117,9 @@
     height: 600px;
     width: 600px;
     margin: auto;
-    
+  }
+  
+  .search-form button {
+    font-size: 20px;
   }
 }
