@@ -125,7 +125,7 @@ class HeaderLoginForm extends React.Component{
                     {/* <ValidationError className='validation-error'/> */}
                     <label htmlFor='email'>Password</label>
                     <input 
-                        type='text'
+                        type='password'
                         name='password'
                         id='password'
                         value={this.state.password}

@@ -4,11 +4,9 @@
     margin-top: 150px;
 } 
 
-
-
 .sign-in-page fieldset {
     width: 80%;
-    background-color: rgba(18,17,19,0.85);
+    background-color: rgba(18,17,19,0.98);
     border-radius: 20px;
     border: 1px black solid;
 }
@@ -18,7 +16,7 @@
 }
 
 .sign-in-page input {
-    width: 65%;
+    width: 60%;
     height: 30px;
     border-radius: 4px;
 }
@@ -27,9 +25,14 @@
     display: block;
     margin: auto;
     height: 30px;
-    width: 40%;
+    width: 35%;
     border-radius: 4px;
+    font-size: 18px;
     background-color: white;
+}
+
+.error p {
+    font-size: 15px;
 }
 
 .demo-login-info {
@@ -48,11 +51,9 @@
     font-size: 15px;
 }
 
-
 @media screen and (min-width: 1000px) { 
     .sign-in-page fieldset {
         width: 50%;
-        background-color: rgba(18,17,19,0.85);
         border-radius: 20px;
         border: 1px black solid;
     }

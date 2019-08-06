@@ -4,7 +4,7 @@ header {
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: rgba(18,17,19,0.85);
+  background-color: rgba(18,17,19,0.96);
   -webkit-box-shadow: 0 3px 5px rgba(18,17,19, 0.6);
   -moz-box-shadow: 0 3px 5px rgba(18,17,19, 0.6);
   box-shadow: 0 4px 5px rgba(18,17,19, 0.6);
