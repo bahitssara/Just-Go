@@ -54,6 +54,7 @@
 .delete-review-button:hover {
   background-color: #024B6E;
   color: white;
+  cursor: pointer;
 }
 
 .event-pic {

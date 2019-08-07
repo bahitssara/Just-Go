@@ -10,4 +10,5 @@
 .add-event-button:hover {
   background-color: #024B6E;
   color: white;
+  cursor: pointer;
 }

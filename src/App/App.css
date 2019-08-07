@@ -9,10 +9,7 @@ body {
   line-height: 1.5;
   text-align: center;
   color: white;
-  background: url(./thisweek2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(./thisweek2.jpg) no-repeat fixed;
   background-size: cover;
 }
 

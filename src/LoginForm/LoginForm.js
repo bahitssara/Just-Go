@@ -138,7 +138,7 @@ class LoginForm extends React.Component {
                             {error && <span className='login-error'>{error}</span>}
                             <p>*Email/Password are case sensitive</p>
                         </div>
-                        <button type='submit'>Sign In</button>
+                        <button type='submit' className='signin-button'>Sign In</button>
                         <section className='demo-login-info'>
                             <h2>Demo login info:</h2>
                             <p>Email: testuser@email.com</p>

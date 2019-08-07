@@ -27,6 +27,7 @@ header a {
 
 .home-link:hover {
   color: #583e88;
+  cursor: pointer;
 }
 
 .fa-grin-tongue {
@@ -46,10 +47,12 @@ header a {
 
 .sign-in-link:hover {
   color: #583e88;
+  cursor: pointer;
 }
 
 .logout-link:hover {
   color: #583e88;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 720px) {

@@ -1,16 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import demoMovie from './JustGoDemo.mp4'
 import './HomePage.css'
 
 
 export default function HomePage() {
     return (
         <section className='home-page'>
-            <h2>Welcome</h2>
+            <h2>Stop saying maybe...</h2>
             <i className='fas fa-calendar' />
             <i className='fas fa-music' />
-            <p>What's up? You're visitng <b>Just Go</b>! Do you ever plan out concerts or events you don't end up going to? Or maybe you plan them but forget to actually purchase tickets? Let's fix that. Save all the events you're dying to attend in one place! </p>
-            <Link to='/signup'><button className='sign-up-button'>Sign Up</button></Link>
+            <video className='demo-video' autoPlay muted controls>
+                    <source src={demoMovie} type='video/mp4' />
+            </video>
+            <h3>Find the right event and Just Go!</h3>
+            <Link to='/signup'><button className='sign-up-button'>Sign Up Here</button></Link>
             <section className='demo-login-info-home'>
                 <h4>Demo login info:
                             <p>Email: testuser@email.com</p>

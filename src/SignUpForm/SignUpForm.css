@@ -54,6 +54,7 @@
 
 .sign-up-submit:hover {
     background-color: #024B6E;
+    cursor: pointer;
     color: white;
 }
 
@@ -63,13 +64,13 @@
         flex-direction: row;
         align-items: center;
     }
-
-    .demo-video {
-        display: none;
-    }
 }
 
 @media screen and (min-width: 730px) {
+    .signup-page h3 {
+        margin-top: 160px;
+    }
+
     .sign-up-fieldset {
         font-size: 20px;
         width: 400px;
@@ -89,6 +90,7 @@
     }
 
     .signup-page h3{
+        margin-top: 110px;
         font-size: 30px;
     }
 
@@ -99,12 +101,5 @@
 
     .validation-error {
         font-size: 15px;
-    }
-
-    .demo-video {
-        display: flex;
-        width: 630px;
-        height: 300px;
-        margin: 50px;
     }
 }

@@ -38,6 +38,7 @@
 
 .search-form button:hover {
   background-color: #024B6E;
+  cursor: pointer;
   color: white;
 }
  

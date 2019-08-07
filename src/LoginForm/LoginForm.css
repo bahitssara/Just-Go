@@ -31,6 +31,10 @@
     background-color: white;
 }
 
+.signin-button:hover {
+    cursor: pointer;
+}
+
 .error p {
     font-size: 15px;
 }

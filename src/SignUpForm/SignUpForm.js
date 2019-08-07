@@ -1,7 +1,6 @@
 import React from 'react'
 import './SignUpForm.css'
 import ThisWeekContext from '../ThisWeekContext'
-import demoMovie from './JustGoDemo.mp4'
 import AuthApiService from '../services/auth-api-service'
 import ValidationError from '../ValidationError/ValidationError'
 
@@ -171,9 +170,6 @@ class SignUpForm extends React.Component {
         return (
             <section className='signup-page'>
                 <h3>Sign Up To Start</h3>
-                <video className='demo-video' autoPlay muted controls>
-                    <source src={demoMovie} type='video/mp4' />
-                </video>
                 <form className='sign-up-main' onSubmit={this.handleAddUser}>
                     <fieldset className='sign-up-fieldset'>
                         <label>First Name</label>
@@ -204,7 +200,7 @@ class SignUpForm extends React.Component {
 
                         <label>Password</label>
                         <input
-                            type='text'
+                            type='password'
                             name='password'
                             id='password-input'
                             onChange={e => this.addPassword(e.target.value)}
