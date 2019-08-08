@@ -5,10 +5,19 @@
     }
 }
 
+@media only screen and (min-width: 765px) {
+    .event-page {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
 @media only screen and (min-width: 1000px) {
     .event-page {
         display: flex;
         margin-top: 140px;
+        flex-wrap: wrap;
     }
 }
 

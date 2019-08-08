@@ -45,16 +45,16 @@ class CalendarFormat extends React.Component {
         const { id, weekday, title, event_url, event, event_date, event_img, event_type } = this.props
         return (
             <div className='calendar-table'>
-                <ul className='weekday'>{weekday}
-                    <li key={id} className='event'>
-                        <a href={event_url} className='event-link new-label' rel='noopener noreferrer' target='_blank'>{title}</a>
-                        <img src={event_img} alt='event' className='event-pic' />
-                        <span className='event-date'> {format(event_date, 'ddd MM/DD/YYYY')}</span>
-                        <p>{event}</p>
-                        <p>{event_type}</p>
-                        {this.renderDeleteButton()}
-                    </li>
-                </ul>
+                    <ul className='weekday'>{weekday}
+                        <li key={id} className='event'>
+                            <a href={event_url} className='event-link new-label' rel='noopener noreferrer' target='_blank'>{title}</a>
+                            <img src={event_img} alt='event' className='event-pic' />
+                            <span className='event-date'> {format(event_date, 'ddd MM/DD/YYYY')}</span>
+                            <p>{event}</p>
+                            <p>{event_type}</p>
+                            {this.renderDeleteButton()}
+                        </li>
+                    </ul>
             </div>
         )
     }
