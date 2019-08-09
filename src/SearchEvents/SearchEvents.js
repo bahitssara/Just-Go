@@ -132,7 +132,7 @@ class SearchEvents extends React.Component {
                     </label>
                     <button type='submit' className='search-button' >Search</button>
                 </form>
-                <h3>Results</h3>
+                <h3>Scroll for Results</h3>
                 <div className='results'>
                     <ul className='results-li'>
                         {results.map(event =>
