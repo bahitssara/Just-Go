@@ -54,6 +54,8 @@
   list-style-type: none;
   padding-left: 0;
   border-radius: 50px;
+  -webkit-overflow-scrolling: touch;
+
 }
 
 .search-li-item {

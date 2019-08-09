@@ -137,7 +137,7 @@ class SearchEvents extends React.Component {
                     <ul className='results-li'>
                         {results.map(event =>
                             <li className='search-li-item' key={event.id}>
-                                <a href={event.url} className='event-link' rel='noopener noreferrer' target='_blank'>{event.title}</a>
+                                <a href={event.url} id='event-link-search' rel='noopener noreferrer' target='_blank'>{event.title}</a>
                                 <img src={event.performers[0].image} alt='event' className='event-photo' />
                                 <p>Event Type:{event.type}</p>
                                 <p>{event.venue.display_location}</p>
