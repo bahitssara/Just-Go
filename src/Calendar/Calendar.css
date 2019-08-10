@@ -8,7 +8,6 @@
 .calendar-page h2 {
   font-family: 'Orbitron', sans-serif;
   text-shadow: 2px 3px 4px rgba(18,17,19);
-  /* padding: 10px; */
   width: 100%;
 }
 
@@ -17,16 +16,17 @@
 }
 
 .calendar-page {
-  /* box-shadow: 2px 4px 3px #1E1A1D; */
   border-radius: 4px;
   font-size: 15px;
   margin: auto;
 }
 
 .event {
-  background-color: rgba(18,17,19,0.90);
+  background-color: rgba(18,17,19,0.96);
   padding: 5px;
   border-radius: 20px;
+  box-shadow: 2px 5px 3px #1E1A1D;
+
 }
 
 .event p {
@@ -60,7 +60,10 @@
 .event-pic {
   display: block;
   margin: auto;
+  border-radius: 30px;
   width: 50%;
+  border: 10px solid #024B6E;
+
 }
 
 
@@ -136,9 +139,9 @@
   }
 
   .event {
-    width: 600px;
-    margin: 20px;
-    height: 520px;
+    width: 520px;
+    margin: auto;
+    height: 480px;
     padding: 5px;
     border-radius: 20px;
   }
@@ -148,7 +151,7 @@
   }
 
   .slick-slider {
-    width: 760px;
+    width: 600px;
   }
 
   .slick-next {

@@ -58,14 +58,11 @@ class SearchEvents extends React.Component {
                 const data = responseJson.events.map(img => {
                     return img.performers
                 })
-                console.log(responseJson.events)
                 if (responseJson.events.length !== 0) {
                     this.setState({
                         searchResults: responseJson.events,
                         img_url: data
                     })
-                    console.log(this.state.searchResults)
-                    console.log(this.state.img_url)
                 } else {
                     this.setState({
                         searchResults: [{
@@ -83,7 +80,6 @@ class SearchEvents extends React.Component {
                             }
                         }]
                     })
-                    console.log(this.state.searchResults)
 
                 }
             })
@@ -142,7 +138,7 @@ class SearchEvents extends React.Component {
                                 <p>Event Type:{event.type}</p>
                                 <p>{event.venue.display_location}</p>
                                 <p>{event.venue.name}</p>
-                                <span className='event-date'>Event Date: {format(event.datetime_local, 'ddd MM/DD/YYYY')}</span>
+                                <span className='event-date'>{format(event.datetime_local, 'ddd MM/DD/YYYY')}</span>
                                 <AddEvent
                                     title={event.title}
                                     weekday={event.datetime_local}

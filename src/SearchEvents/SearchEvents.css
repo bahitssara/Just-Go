@@ -69,14 +69,15 @@
   color: white;
   margin: 50px;
   hyphens: auto;
-
+  font-size: 20px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .event-photo {
   display: block;
   margin: auto;
   border-radius: 40px;
-  width: 50%;
+  border: 10px solid #583e88;
 }
 
 @media only screen and (min-width: 320px) {
