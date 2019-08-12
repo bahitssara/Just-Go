@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 import './EventPage.css'
 import SearchEvents from '../SearchEvents/SearchEvents'
-import Calendar from '../Calendar/Calendar'
+import AllEvents from '../AllEvents/AllEvents';
 
 class EventPage extends React.Component {
     render() {
         return (
             <section className='event-page'>
                 <SearchEvents />
-                <Calendar />
+                <AllEvents />
             </section>
         )
     }

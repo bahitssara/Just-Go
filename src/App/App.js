@@ -4,9 +4,10 @@ import { Route } from 'react-router-dom'
 import SignUpForm from '../SignUpForm/SignUpForm'
 import Header from '../Header/Header'
 import Footer from '../footer/footer'
-import HomePage from '../HomePage/HomePage';
-import EventPage from '../EventPage/EventPage';
-import LoginForm from '../LoginForm/LoginForm';
+import Calendar from '../Calendar/Calendar'
+import HomePage from '../HomePage/HomePage'
+import EventPage from '../EventPage/EventPage'
+import LoginForm from '../LoginForm/LoginForm'
 import ThisWeekContext from '../ThisWeekContext'
 
 class App extends React.Component {
@@ -69,6 +70,7 @@ class App extends React.Component {
           <Route path='/signup' component={SignUpForm} exact />
           <Route path='/events' component={EventPage} exact />
           <Route path='/login' component={LoginForm} exact />
+          <Route path='/myevents' component={Calendar} exact />
           <Route path='/' component={Footer} />
         </main>
       </ThisWeekContext.Provider>

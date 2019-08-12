@@ -14,8 +14,8 @@ class Header extends React.Component {
   renderLogoutLink() {
     return (
       <div className='header-logged-in'>
-        <Link to='/events' className='home-link'>
-          <h1>Just Go
+        <Link to='/myevents' className='home-link'>
+          <h1>Your Events
               <i className='far fa-grin-tongue'></i></h1>
         </Link>
         <Link

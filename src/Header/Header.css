@@ -25,7 +25,7 @@ header a {
   text-decoration: none;
 }
 
-.home-link:hover {
+.home-link h1:hover {
   color: #583e88;
   cursor: pointer;
 }
@@ -50,7 +50,7 @@ header a {
   cursor: pointer;
 }
 
-.logout-link:hover {
+.logout:hover {
   color: #583e88;
   cursor: pointer;
 }

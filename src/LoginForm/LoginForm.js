@@ -16,6 +16,7 @@ class LoginForm extends React.Component {
             email: '',
             password: '',
             user: '',
+            isLoading: false,
             error: null,
             emailValid: false,
             passwordValid: false,
@@ -91,7 +92,7 @@ class LoginForm extends React.Component {
     // Handle user login and create auth token 
     handleSubmitJwtAuth = ev => {
         ev.preventDefault();
-        this.setState({ error: null });
+        this.setState({ error: null,  isLoading: true });
         const { email, password } = ev.target
         AuthApiService.postLogin({
             email: email.value,
@@ -102,6 +103,7 @@ class LoginForm extends React.Component {
                 password.value = ''
                 TokenService.saveAuthToken(res.authToken)
                 TokenService.saveUserId(res.userid)
+                this.setState({ isLoading: false })
                 window.location = '/events';
             })
             .catch(res => {
@@ -111,7 +113,7 @@ class LoginForm extends React.Component {
     static contextType = ThisWeekContext;
 
     render() {
-        const { error } = this.state;
+        const { error, isLoading } = this.state;
         return (
             <section className='sign-in'>
                 <form className='sign-in-page' onSubmit={this.handleSubmitJwtAuth}>
@@ -135,6 +137,7 @@ class LoginForm extends React.Component {
                         />
                         <ValidationError hasError={!this.state.passwordValid} message={this.state.validationMessages.password} />
                         <div className='error' role='alert'>
+                            {isLoading && <span className='login-loading'>Logging in...</span>}
                             {error && <span className='login-error'>{error}</span>}
                             <p>*Email/Password are case sensitive</p>
                         </div>

@@ -1,8 +1,6 @@
 .calendar-page {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 20px;
+  flex-direction: column;
 }
 
 .calendar-page h2 {
@@ -61,7 +59,20 @@
   border-radius: 30px;
   width: 50%;
   border: 10px solid #024B6E;
+}
 
+.search-events-button {
+  margin: auto;
+  background-color: black;
+  color: white;
+  border: 3px solid #024B6E;
+}
+
+.search-events-button:hover {
+  cursor: pointer;
+  background-color: #024B6E;
+  color: white;
+  border: 3px solid white;
 }
 
 
@@ -69,15 +80,18 @@
 @media only screen and (min-width: 320px) {
   .calendar-page {
     font-size: 15px;
+    margin-top: 120px;
   }
 
-  .weekday {
-    width:300px;
+  .search-events-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
   }
 
   .event {
     padding: 5px;
-    width: 310px;
+    width: 300px;
     height: 350px;
     margin: auto;
   }
@@ -92,12 +106,21 @@
 
   .slick-slider {
     width: 350px;
+    margin: auto;
   }
 }
 
 @media only screen and (min-width: 725px) {
   .calendar-page {
     font-size: 18px;
+    margin-top: 160px;
+  }
+
+  .search-events-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    font-size: 17px;
   }
 
   .weekday {
@@ -106,8 +129,8 @@
 
   .event {
     padding: 0px;
-    width: 450px;
-    height: 385px;
+    width: 500px;
+    height: 440px;
     margin: auto;
   }
 
@@ -116,11 +139,12 @@
   }
 
   .event-pic{
-    width: 265px;
+    width: 280px;
   }
 
   .slick-slider {
-    width: 500px;
+    width: 550px;
+    margin: auto;
   }
 
   .slick-prev {
@@ -131,11 +155,15 @@
 
 @media only screen and (min-width: 1000px) {
   .calendar-page {
-    width:420px;
-    display: flex;
-    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 60px;
   }
 
+  .search-events-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
   .event {
     width: 520px;
     margin: auto;
@@ -149,7 +177,8 @@
   }
 
   .slick-slider {
-    width: 600px;
+    width: 600px;    
+
   }
 
   .slick-next {
