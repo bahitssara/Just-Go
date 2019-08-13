@@ -13,7 +13,7 @@ class SearchEvents extends React.Component {
         this.state = {
             query: '',
             searchResults: [],
-            img_url: 'https://icon-library.net/images/no-image-icon/no-image-icon-0.jpg',
+            img_url: '',
             weekday: '',
             title: '',
             event_url: '',
@@ -21,7 +21,8 @@ class SearchEvents extends React.Component {
             event_date: '',
             event_img: '',
             event_type: '',
-            user_id: ''
+            user_id: '',
+            imgError: true
         }
         this.handleSearch = this.handleSearch.bind(this)
     }
@@ -120,7 +121,7 @@ class SearchEvents extends React.Component {
         return (
             <section className='search-bar'>
                 <form className='search-form' onSubmit={e => this.updateState(e)}>
-                    <label htmlFor='search-input'>Search a city, event or musician and <span className='just-go'>Just Go!</span>
+                    <label htmlFor='search-input'>Search a city, event, venue or musician and <span className='just-go'>Just Go!</span>
                         <input type='text' name='search_input' id='search_input' ref={input => (this.input = input)} required/>
                     </label>
                     <button type='submit' className='search-button' >Search</button>
@@ -130,7 +131,12 @@ class SearchEvents extends React.Component {
                         {results.map(event =>
                             <li className='search-li-item' key={event.id}>
                                 <a href={event.url} id='event-link-search' rel='noopener noreferrer' target='_blank'>{event.title}</a>
-                                <img src={event.performers[0].image} alt='event' className='event-photo' />     <p>Event Type:{event.type}</p>
+                                <img
+                                    className='event-photo'
+                                    alt='test'
+                                    src={event.performers[0].image ? event.performers[0].image : 'https://icon-library.net/images/no-image-icon/no-image-icon-0.jpg'}
+                                />
+                                <p>Event Type:{event.type}</p>
                                 <p>{event.venue.display_location}</p>
                                 <p>{event.venue.name}</p>
                                 <span className='event-date'>{format(event.datetime_local, 'ddd MM/DD/YYYY')}</span>
@@ -141,7 +147,7 @@ class SearchEvents extends React.Component {
                                     event={event.venue.display_location}
                                     event_url={event.url}
                                     event_date={event.datetime_local}
-                                    event_img={event.performers[0].image}
+                                    event_img={event.performers[0].image ? event.performers[0].image : 'https://icon-library.net/images/no-image-icon/no-image-icon-0.jpg'}
                                     onAddEvent={(e) => this.handleEventSubmit(e)}
                                 />
                             </li>

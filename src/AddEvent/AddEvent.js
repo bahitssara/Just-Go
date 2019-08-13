@@ -13,7 +13,7 @@ export default function AddEvent(props) {
                 <input type='hidden' id='event_type' name='event_type' value={props.event_type} />
                 <input type='hidden' id='event' name='event' value={props.event} />
                 <input type='hidden' id='event_date' name='event_date' value={props.event_date} />
-                <input type='hidden' id='event_img' name='event_img' value={props.event_img} />
+                <input type='hidden' id='event_img' name='event_img' value={props.event_img}/>
                 <button type='submit' className='add-event-button'>Add Event</button>
             </form>
         </section>

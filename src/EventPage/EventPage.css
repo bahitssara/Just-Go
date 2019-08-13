@@ -2,6 +2,9 @@
     .event-page {
         margin-top: 140px;
         margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        
     }
 }
 
