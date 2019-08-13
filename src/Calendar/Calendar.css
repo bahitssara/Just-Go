@@ -146,10 +146,6 @@
     width: 550px;
     margin: auto;
   }
-
-  .slick-prev {
-    padding: 8px;
-  }
 }
 
 
@@ -179,9 +175,5 @@
   .slick-slider {
     width: 600px;    
 
-  }
-
-  .slick-next {
-    padding: 50px;
   }
 }

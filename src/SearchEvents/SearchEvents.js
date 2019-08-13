@@ -13,7 +13,7 @@ class SearchEvents extends React.Component {
         this.state = {
             query: '',
             searchResults: [],
-            img_url: '',
+            img_url: 'https://icon-library.net/images/no-image-icon/no-image-icon-0.jpg',
             weekday: '',
             title: '',
             event_url: '',
@@ -55,13 +55,9 @@ class SearchEvents extends React.Component {
                 throw new Error(response.statusText);
             })
             .then(responseJson => {
-                const data = responseJson.events.map(img => {
-                    return img.performers
-                })
                 if (responseJson.events.length !== 0) {
                     this.setState({
                         searchResults: responseJson.events,
-                        img_url: data
                     })
                 } else {
                     this.setState({
@@ -117,6 +113,7 @@ class SearchEvents extends React.Component {
             })
     }
 
+
     static contextType = ThisWeekContext;
     render() {
         const results = this.state.searchResults
@@ -133,8 +130,7 @@ class SearchEvents extends React.Component {
                         {results.map(event =>
                             <li className='search-li-item' key={event.id}>
                                 <a href={event.url} id='event-link-search' rel='noopener noreferrer' target='_blank'>{event.title}</a>
-                                <img src={event.performers[0].image} alt='event' className='event-photo' />
-                                <p>Event Type:{event.type}</p>
+                                <img src={event.performers[0].image} alt='event' className='event-photo' />     <p>Event Type:{event.type}</p>
                                 <p>{event.venue.display_location}</p>
                                 <p>{event.venue.name}</p>
                                 <span className='event-date'>{format(event.datetime_local, 'ddd MM/DD/YYYY')}</span>
