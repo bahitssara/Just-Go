@@ -2,6 +2,7 @@ import TokenService from './token-service'
 import config from '../config'
 
 const EventsApiService = {
+  //method to post event to just-go-api
   postEvent(event) {
     return fetch(`${config.API_ENDPOINT}/api/events`, {
       method: 'POST',

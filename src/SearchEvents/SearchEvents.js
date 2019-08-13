@@ -84,7 +84,7 @@ class SearchEvents extends React.Component {
                 console.error({ error })
             })
     }
-
+    //send event details to /api/events just-go-api endpoint
     handleEventSubmit = ev => {
         ev.preventDefault();
         this.setState({ error: null })
@@ -141,6 +141,7 @@ class SearchEvents extends React.Component {
                                 <p>{event.venue.name}</p>
                                 <span className='event-date'>{format(event.datetime_local, 'ddd MM/DD/YYYY')}</span>
                                 <AddEvent
+                                    //render button and collect event details to send to api
                                     title={event.title}
                                     weekday={event.datetime_local}
                                     event_type={event.type}

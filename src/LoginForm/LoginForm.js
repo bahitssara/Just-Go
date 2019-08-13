@@ -34,7 +34,7 @@ class LoginForm extends React.Component {
     addPassword(password) {
         this.setState({ password }, () => { this.validatePassword(password) });
     }
-
+    //error message for email input 
     validateEmail(fieldValue) {
         const fieldErrors = { ...this.state.validationMessage }
         let hasError = false;
@@ -58,7 +58,8 @@ class LoginForm extends React.Component {
             emailValid: !hasError
         }, this.formValid);
     }
-
+    
+    //error messages for password input
     validatePassword(fieldValue) {
         const fieldErrors = { ...this.state.validationMessage }
         let hasError = false;

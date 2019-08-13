@@ -41,6 +41,7 @@ class Calendar extends React.Component {
 
     render() {
         const { events = [], isLoading } = this.state;
+        //provide settings for slider feature
         const settings = {
             dots: true,
             infinite: true,

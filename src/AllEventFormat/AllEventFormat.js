@@ -8,6 +8,7 @@ import AddEvent from '../AddEvent/AddEvent'
 class AllEventFormat extends React.Component {
     static contextType = ThisWeekContext
 
+    //submit events to the /api/events endpoint in just-go-api
     handleEventSubmit = ev => {
         ev.preventDefault();
         this.setState({ error: null })
@@ -49,6 +50,7 @@ class AllEventFormat extends React.Component {
                             <p>{event}</p>
                             <p>{event_type}</p>
                             <AddEvent
+                            //component that renders add event button and collects values to send to just-go-api
                                     title={title}
                                     weekday={weekday}
                                     event_type={event_type}

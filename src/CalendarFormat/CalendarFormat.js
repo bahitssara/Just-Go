@@ -18,6 +18,7 @@ class CalendarFormat extends React.Component {
         }
     }
 
+    //delete posted event from just-go-api
     handleClickDelete = e => {
         e.preventDefault();
         const eventId = this.props.id

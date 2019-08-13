@@ -27,6 +27,7 @@ class SignUpForm extends React.Component {
         }
     }
 
+    //send new user info to just-go-api 
     handleAddUser = ev => {
         ev.preventDefault()
         const { first_name, last_name, email, password } = ev.target
@@ -67,7 +68,7 @@ class SignUpForm extends React.Component {
         this.setState({ password }, () => { this.validatePassword(password) });
     }
 
-
+    //error message for first name input
     validateFirstName(fieldValue) {
         const fieldErrors = { ...this.state.validationMessage }
         let hasError = false;
@@ -92,6 +93,7 @@ class SignUpForm extends React.Component {
         }, this.formValid);
     }
 
+    //error message for last name input
     validateLastName(fieldValue) {
         const fieldErrors = { ...this.state.validationMessage }
         let hasError = false;
@@ -115,7 +117,7 @@ class SignUpForm extends React.Component {
             last_nameValid: !hasError
         }, this.formValid);
     }
-
+    //error message for email input
     validateEmail(fieldValue) {
         const fieldErrors = { ...this.state.validationMessage }
         let hasError = false;
@@ -139,7 +141,7 @@ class SignUpForm extends React.Component {
             emailValid: !hasError
         }, this.formValid);
     }
-
+    //error message for passwork input
     validatePassword(fieldValue) {
         const fieldErrors = { ...this.state.validationMessage }
         let hasError = false;

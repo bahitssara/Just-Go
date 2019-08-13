@@ -39,6 +39,7 @@ class AllEvents extends React.Component {
 
     render() {
         const { events = [], isLoading } = this.state;
+        //provide settings for slider feature 
         const settings = {
             dots: true,
             infinite: true,
@@ -50,7 +51,6 @@ class AllEvents extends React.Component {
             <section className='all-event-page'>
                 <h2>What people are diggin'</h2>
                 {isLoading && <span className='login-loading'>Looking for events!</span>}
-
                 <Slider {...settings}>
                 {events.map(event =>
                         <AllEventFormat

@@ -16,79 +16,19 @@ class HeaderLoginForm extends React.Component {
             password: '',
             user: '',
             isLoading: false,
-            error: null,
-            emailValid: false,
-            passwordValid: false,
-            validationMessages: {
-                email: '',
-                password: '',
-            }
+            error: null
         }
     }
 
     addEmail(email) {
-        this.setState({ email }, () => { this.validateEmail(email) });
+        this.setState({ email });
     }
 
     addPassword(password) {
-        this.setState({ password }, () => { this.validatePassword(password) });
+        this.setState({ password });
     }
 
-    validateEmail(fieldValue) {
-        const fieldErrors = { ...this.state.validationMessage }
-        let hasError = false;
-
-        fieldValue = fieldValue.trim();
-        if (fieldValue.length === 0) {
-            fieldErrors.email = 'Email is required';
-            hasError = true;
-        } else {
-            if (fieldValue.length < 3) {
-                fieldErrors.email = 'Email must be at least 3 characters long';
-                hasError = true;
-            } else {
-                fieldErrors.email = '';
-                hasError = false;
-            }
-        }
-
-        this.setState({
-            validationMessages: fieldErrors,
-            emailValid: !hasError
-        }, this.formValid);
-    }
-
-    validatePassword(fieldValue) {
-        const fieldErrors = { ...this.state.validationMessage }
-        let hasError = false;
-
-        fieldValue = fieldValue.trim();
-        if (fieldValue.length === 0) {
-            fieldErrors.password = 'Password is required';
-            hasError = true;
-        } else {
-            if (fieldValue.length < 8) {
-                fieldErrors.password = 'Password must be at least 8 characters long';
-                hasError = true;
-            } else {
-                fieldErrors.password = '';
-                hasError = false;
-            }
-        }
-
-        this.setState({
-            validationMessages: fieldErrors,
-            passwordValid: !hasError
-        }, this.formValid);
-    }
-
-    formValid() {
-        this.setState({
-            formValid: this.state.emailValid && this.state.passwordValid
-        });
-    }
-
-    // Handle user login and create auth token 
+    // Handle user login and create auth token
     handleSubmitJwtAuth = ev => {
         ev.preventDefault();
         this.setState({ error: null, isLoading: true });
@@ -124,7 +64,6 @@ class HeaderLoginForm extends React.Component {
                         value={this.state.email}
                         onChange={e => this.addEmail(e.target.value)}
                     />
-                    {/* <ValidationError className='validation-error'/> */}
                     <label htmlFor='email'>Password</label>
                     <input
                         type='password'
@@ -133,7 +72,6 @@ class HeaderLoginForm extends React.Component {
                         value={this.state.password}
                         onChange={e => this.addPassword(e.target.value)}
                     />
-                    {/* <ValidationError hasError={!this.state.passwordValid} message={this.state.validationMessages.password} /> */}
                     <button type='submit'>Sign In</button>
                     <div className="error" role="alert">
                         {isLoading && <span className='login-loading'>Logging in...</span>}

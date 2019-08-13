@@ -6,11 +6,14 @@ import HeaderLoginForm from '../HeaderLoginForm/HeaderLoginForm';
 
 
 class Header extends React.Component {
+
+  // clear token and userid from session storage 
   handleLogoutClick = () => {
     TokenService.clearAuthToken()
     TokenService.clearUserId()
   }
 
+//method to display logout link in the header 
   renderLogoutLink() {
     return (
       <div className='header-logged-in'>
@@ -28,6 +31,7 @@ class Header extends React.Component {
     )
   }
 
+//method to display login link in the header
   renderLoginLink() {
     return (
       <div>
@@ -46,6 +50,7 @@ class Header extends React.Component {
 
   render() {
     return (
+      //display proper header for logged in and logged out users
       <header className='header'>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()

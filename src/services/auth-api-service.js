@@ -1,5 +1,6 @@
 import config from '../config'
 
+//methods for login and user registration 
 const AuthApiService = {
   postLogin(credentials) {
     return fetch(`${config.API_ENDPOINT}/api/login`, {
