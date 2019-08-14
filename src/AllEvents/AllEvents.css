@@ -60,26 +60,7 @@
     width: 300px;
     border: 10px solid #024B6E;
   }
-  
-  .search-events-button {
-    margin: auto;
-    background-color: black;
-    color: white;
-    border: 3px solid #024B6E;
-  }
-  
-  .search-events-button:hover {
-    cursor: pointer;
-    background-color: #024B6E;
-    color: white;
-    border: 3px solid white;
-  }
 
-  .login-loading {
-    font-size: 30px;
-  }
-  
-  
   
   @media only screen and (min-width: 320px) {
     .all-event-page {
@@ -96,7 +77,7 @@
     .event {
       padding: 5px;
       width: 300px;
-      height: 350px;
+      height: 375px;
       margin: auto;
     }
   
@@ -116,6 +97,10 @@
 
     .slick-prev {
       padding: 14px;
+    }
+
+    .event-pic {
+      width: 225px;
     }
   }
   
@@ -150,6 +135,10 @@
     .slick-slider {
       width: 555px;
       margin: auto;
+    }
+
+    .event-pic {
+      width: 300px;
     }
   }
   
