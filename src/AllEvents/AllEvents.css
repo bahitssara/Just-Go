@@ -34,11 +34,6 @@
     color: white;
   }
   
-  .event-link:hover {
-    color: #024B6E;
-    font-size:16px;
-  }
-  
   .delete-review-button {
     background-color: white;
     width: 25%;
